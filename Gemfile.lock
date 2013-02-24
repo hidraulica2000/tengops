@@ -1,5 +1,5 @@
 PATH
-  remote: ../psn_trophies
+  remote: psn_trophies
   specs:
     psn_trophies (0.0.2)
       nokogiri (~> 1.5.0)
