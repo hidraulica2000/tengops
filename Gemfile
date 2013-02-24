@@ -10,7 +10,7 @@ gem 'devise', '2.2.3'
 gem 'omniauth','1.1.2'
 gem 'omniauth-facebook', '1.4.1'
 gem 'haml','3.1.7'
-gem 'psn_trophies', path: "psn_trophies"
+gem 'psn_trophies', git: "https://github.com/tomasherrera/psn_trophies.git"
 gem 'savon', '2.1.0'
 gem 'nori', '2.0.3'
 
