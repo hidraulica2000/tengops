@@ -1,0 +1,93 @@
+!!!
+%html
+  %head
+    %title Tengops
+    = stylesheet_link_tag   "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    %meta{:charset => "utf-8"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "width=device-width", :name => "viewport"}
+    %link{:href => "assets/theme_venera_blue.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Abel:400|Oswald:300,400,700", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    %div.navbar.navbar-fixed-top.navbar-inverse
+      %div.navbar-inner
+        %div.container
+          = link_to "Tengo Playstaton", root_path, class: "brand"
+          %ul.nav   
+            %li
+              .btn-toolbar2
+                .btn-group
+                  %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                    %i.icon-bell
+                    %span.badge.badge-important{:style => "font-size: 9px"}
+                      %strong 12
+                  %ul.dropdown-menu
+                    %div{:style => "padding-left:10px; padding-right:10px"}
+                      = link_to root_path do
+                        = image_tag(User.find(14).avatar, :style => "width: 20px; height:20px") 
+                        %small tomaszed91 Te ha comprado Uncharted 3
+                    %div{:style => "padding-left:10px; padding-right:10px"}
+                      = link_to root_path do
+                        = image_tag(User.find(14).avatar, :style => "width: 20px; height:20px") 
+                        %small robertjunior86 Te ha comprado Call of Duty Black Ops 2
+                    %hr{:style => "margin-top: 1px; margin-bottom: 2px"}
+                    %h5{:style => "text-align: center;"} Más
+
+                .btn-group
+                  %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                    %i.icon-envelope
+                  %ul.dropdown-menu
+                  / dropdown menu links
+                .btn-group
+                  %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                    %i.icon-shopping-cart
+                  %ul.dropdown-menu
+                  / dropdown menu links
+                 
+          %ul.nav.pull-right
+            - if user_signed_in?
+              / - begin
+              - clase = ""              
+              - if params[:action] == "profile"
+                - clase = "active"
+              %li{:class => clase, :id => "profile-navbar"}
+                = link_to image_tag(current_user.avatar, :style => "width: 25px; height:25px") + " #{(current_user.gamertag).camelcase}", profile_path(current_user)
+              / - rescue
+              /   %li.active Error
+              %li= link_to content_tag(:i, nil, :class => "icon-signout") + "Salir", destroy_user_session_path, method: :delete             
+            - else
+              %li= link_to "Ingresar", "#", :class => "top-sign-in"
+              %li= link_to "Registrarme", new_user_registration_path
+
+              .login-box
+                = form_tag user_session_path do
+                  %a.close.login-box-close{:href => "#"} &times;
+                  %h4.login-box-head Formulario de Inicio de Sesión
+                  .control-group
+                    %label Correo Electrónico
+                    = text_field_tag "user[email]", nil, options = {:class =>  "span2", :placeholder => "Correo...", :type => "text"}
+                  .control-group
+                    %label Contraseña
+                    = password_field_tag "user[password]", nil, options = {:class =>  "span2", :placeholder => "Contraseña..."}
+                  .login-actions
+                    %button.btn.btn-primary{:type => "submit", :value => "Iniciar Sesión"} Iniciar Sesión
+    - if flash[:notice]
+      .alert.alert-success
+        %button.close{"data-dismiss" => "alert", :type => "button"} x
+        = flash[:notice]
+    - if flash[:alert]
+      .alert.alert-error
+        %button.close{"data-dismiss" => "alert", :type => "button"} ×
+        = flash[:alert]
+    = yield
+%script
+  $('#profile-navbar').hover(
+  function () {
+  $(this).addClass('active');},
+  function () {
+  $(this).removeClass('active');
+  }
+  );

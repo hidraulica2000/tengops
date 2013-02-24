@@ -1,0 +1,456 @@
+!!!
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8] <html class="no-js lt-ie9">
+/ [if gt IE 8]><!
+%html.no-js
+  / <![endif]
+  %head
+    
+  %body
+    /[if lt IE 7]
+      <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+    %header#header
+      
+    #homepage-carousel.carousel.slide.over-something
+      .carousel-inner.slider-w
+        .active.item
+          .container
+            %h1.slider-header
+              Bienvenido
+              %strong A
+              Tengo Playstation
+            %h2.slider-sub-header Una comunidad para fans de Playstation. Gratis y libre para todos.
+            .cta
+              %a.btn.btn-cta{:href => "features/pricing_tables.html"} Registrarme
+            .slider-browsers-w.clearfix
+              .slider-browser.slider-browser-left.hidden-phone{"data-position-bottom" => "-8%"}
+                %img{:alt => "Browser-window-1", :src => "assets/browser-window.png"}/
+              .slider-browser.slider-browser-center{"data-position-bottom" => "-9%"}
+                %img{:alt => "Browser-window-2", :src => "assets/browser-window.png"}/
+              .slider-browser.slider-browser-right.hidden-phone{"data-position-bottom" => "-8%"}
+                %img{:alt => "Browser-window-3", :src => "assets/browser-window.png"}/
+        .item
+          .container
+            %h1.slider-header I am always on skype, feel free to ask questions.
+            %h2.slider-sub-header Maecenas fermentum sem in nunc sagittis iaculis.
+            .cta
+              %a.btn.btn-cta.btn-warning{:href => "features/pricing_tables.html"} Some Action Button
+            .row.zoomed-browsers-w
+              .span4
+                .zoomed-browser
+                  %img{:alt => "Browser-window-1", :src => "assets/browser-window.png"}/
+              .span4
+                .zoomed-browser.hidden-phone
+                  %img{:alt => "Browser-window-2", :src => "assets/browser-window.png"}/
+              .span4
+                .zoomed-browser.hidden-phone
+                  %img{:alt => "Browser-window-3", :src => "assets/browser-window.png"}/
+      %a.carousel-control.left{"data-slide" => "prev", :href => "#homepage-carousel"}
+        %i.icon-chevron-left
+      %a.carousel-control.right{"data-slide" => "next", :href => "#homepage-carousel"}
+        %i.icon-chevron-right
+    .sub-slider-features
+      .container
+        .row
+          .span4
+            .info-bullet
+              %i.icon-file
+              %h5 Blog Pages Design
+              %p Vestibulum placerat purus sed nunc tincidunt ultrices et. Vivamus pharetra aliquet nisi non pretium.
+          .span4
+            .info-bullet
+              %i.icon-tags
+              %h5 Responsive Template
+              %p Vestibulum placerat purus sed nunc tincidunt ultrices et. Vivamus pharetra aliquet nisi non pretium.
+          .span4
+            .info-bullet
+              %i.icon-cogs
+              %h5 Easy to Customize
+              %p Vestibulum placerat purus sed nunc tincidunt ultrices et. Vivamus pharetra aliquet nisi non pretium.
+    %section.section-wrapper.under-slider
+      .container
+        .row
+          .span12
+            %h3.section-header Recent Work
+          .span3
+            .white-card
+              .img-w.hover-fader
+                %a{"data-rel" => "lightbox[gallery]", :href => "assets/test-square.png"}
+                  %img{:alt => "Photo-card", :src => "assets/test-square.png"}
+                    %span.hover-fade
+                      %i.icon-zoom-in
+              %h5 Donec et egestas elit.
+              %p Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis.
+          .span3
+            .white-card
+              .img-w.hover-fader
+                %a{"data-rel" => "lightbox[gallery]", :href => "assets/test-square.png"}
+                  %img{:alt => "Photo-card", :src => "assets/test-square.png"}
+                    %span.hover-fade
+                      %i.icon-zoom-in
+              %h5 Donec et egestas elit.
+              %p Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis.
+          .span3
+            .white-card
+              .img-w.hover-fader
+                %a{"data-rel" => "lightbox[gallery]", :href => "assets/test-square.png"}
+                  %img{:alt => "Photo-card", :src => "assets/test-square.png"}
+                    %span.hover-fade
+                      %i.icon-zoom-in
+              %h5 Donec et egestas elit.
+              %p Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis.
+          .span3
+            .white-card
+              .img-w.hover-fader
+                %a{"data-rel" => "lightbox[gallery]", :href => "assets/test-square.png"}
+                  %img{:alt => "Photo-card", :src => "assets/test-square.png"}
+                    %span.hover-fade
+                      %i.icon-zoom-in
+              %h5 Donec et egestas elit.
+              %p Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis.
+    %section.section-wrapper
+      .container
+        .row
+          .span6
+            %h3.section-header Client Testimonials
+            .testimonials
+              .testimonials-users.row.hidden-phone
+                .span1
+                  %a.testimonials-user-w.active{"data-toggle" => "testimonial", :href => "#testimonial1"}
+                    %span.testimonials-user
+                      %img{:alt => "Avatar-1", :src => "assets/test-user.png"}/
+                .span1
+                  %a.testimonials-user-w{"data-toggle" => "testimonial", :href => "#testimonial2"}
+                    %span.testimonials-user
+                      %img{:alt => "Avatar-2", :src => "assets/test-user.png"}/
+                .span1
+                  %a.testimonials-user-w{"data-toggle" => "testimonial", :href => "#testimonial3"}
+                    %span.testimonials-user
+                      %img{:alt => "Avatar-4", :src => "assets/test-user.png"}/
+                .span1
+                  %a.testimonials-user-w{"data-toggle" => "testimonial", :href => "#testimonial4"}
+                    %span.testimonials-user
+                      %img{:alt => "Avatar-1", :src => "assets/test-user.png"}/
+                .span1
+                  %a.testimonials-user-w{"data-toggle" => "testimonial", :href => "#testimonial5"}
+                    %span.testimonials-user
+                      %img{:alt => "Avatar-2", :src => "assets/test-user.png"}/
+                .span1
+                  %a.testimonials-user-w{"data-toggle" => "testimonial", :href => "#testimonial6"}
+                    %span.testimonials-user
+                      %img{:alt => "Avatar-4", :src => "assets/test-user.png"}/
+              .testimonials-speeches
+                #testimonial1.testimonials-speech.active
+                  %p
+                    %strong Homer Simpson is amazing.
+                    I've worked with Homer on couple of projects and i really like how lazy he is. Sleeps a lot, does not compain much, a perfect employee.
+                  .speech-by
+                    Mr. Burns, Springfield Nuclear Power Plant
+                #testimonial2.testimonials-speech
+                  %p
+                    %strong Nulla gravida tellus id fermentum.
+                    Phasellus aliquet lobortis dolor, vel aliquam tortor porta vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.
+                  .speech-by
+                    John Doe, Dundler Mufflin
+                #testimonial3.testimonials-speech
+                  %p
+                    %strong Aliquam at sodales arcu.
+                    Nulla gravida, tellus id fermentum tempus, urna elit tempus justo, a tincidunt dui lacus nec est. Maecenas ligula ipsum, suscipit quis posuere id, porttitor vitae odio. Phasellus cursus mauris nec felis sollicitudin ac semper quam hendrerit. Morbi sagittis lobortis libero id imperdiet.
+                  .speech-by
+                    John Doe, Dundler Mufflin
+                #testimonial4.testimonials-speech
+                  %p
+                    %strong Aenean purus ipsum convallis.
+                    Quisque eu est ipsum. Aliquam at sodales arcu. Cras justo velit, pretium quis luctus a, posuere vitae justo. Proin porttitor ultricies justo at semper. Curabitur leo tortor, placerat ut placerat vel, tristique et ipsum. Maecenas at tellus leo, vitae pellentesque velit. Mauris ac augue magna. Vestibulum et magna at urna venenatis vehicula.
+                  .speech-by
+                    John Doe, Solomon Inc
+                #testimonial5.testimonials-speech
+                  %p
+                    %strong Maecenas id rutrum enim.
+                    Pellentesque fringilla fringilla molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                  .speech-by
+                    John Doe, ThemeForest
+                #testimonial6.testimonials-speech
+                  %p
+                    %strong Pellentesque habitant morbi tristique
+                    Aenean venenatis nisi sit amet massa congue commodo. Aenean purus ipsum, convallis quis rhoncus ut, ullamcorper eget metus.
+                  .speech-by
+                    John Doe, Dundler Mufflin
+          .span6
+            %h3.section-header Services We Offer
+            #accordion.accordion
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
+                    Web Development
+                #collapseOne.accordion-body.collapse.in
+                  .accordion-inner
+                    Cras lacinia laoreet libero et mattis. In facilisis neque id lectus hendrerit in dignissim orci rhoncus. Etiam lacinia, mauris sed sagittis laoreet, sapien erat consectetur enim, eget sagittis orci magna at dolor. Donec semper tellus vitae massa laoreet congue. In id elit in turpis fermentum bibendum eget ac nibh.
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
+                    Photoshop Website Design
+                #collapseTwo.accordion-body.collapse
+                  .accordion-inner
+                    Cras lacinia laoreet libero et mattis. In facilisis neque id lectus hendrerit in dignissim orci rhoncus. Etiam lacinia, mauris sed sagittis laoreet, sapien erat consectetur enim, eget sagittis orci magna at dolor. Donec semper tellus vitae massa laoreet congue. In id elit in turpis fermentum bibendum eget ac nibh.
+              .accordion-group
+                .accordion-heading
+                  %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree"}
+                    Search Engine Optimization
+                #collapseThree.accordion-body.collapse
+                  .accordion-inner
+                    Cras lacinia laoreet libero et mattis. In facilisis neque id lectus hendrerit in dignissim orci rhoncus. Etiam lacinia, mauris sed sagittis laoreet, sapien erat consectetur enim, eget sagittis orci magna at dolor. Donec semper tellus vitae massa laoreet congue. In id elit in turpis fermentum bibendum eget ac nibh.
+    %section.section-wrapper.stripped
+      .container
+        .row.clients-w
+          .span12
+            %h3.section-header Our Clients
+          .span2
+            .white-card
+              %img{:alt => "Client-1", :src => "assets/test-square.png"}/
+          .span2
+            .white-card
+              %img{:alt => "Client-2", :src => "assets/test-square.png"}/
+          .span2
+            .white-card
+              %img{:alt => "Client-3", :src => "assets/test-square.png"}/
+          .span2
+            .white-card
+              %img{:alt => "Client-4", :src => "assets/test-square.png"}/
+          .span2
+            .white-card
+              %img{:alt => "Client-5", :src => "assets/test-square.png"}/
+          .span2
+            .white-card
+              %img{:alt => "Client-6", :src => "assets/test-square.png"}/
+    %section.section-wrapper.stripped
+      .container
+        .row
+          .span12
+            %h3.section-header From the Blog
+          .span4
+            .white-card.recent-post.clearfix
+              %h5.recent-post-header
+                %a{:href => "blog/single_post.html"} Nullam velit diam, rhoncus sed
+              .post-info.clearfix
+                .pull-left
+                  %span.post-date January 15, 2011
+                  %a.post-comments{:href => "blog/single_post.html"} 14 Comments
+                .pull-right
+                  %a.post-like{:href => "#"}
+                    %i.icon-heart
+                    250
+              %img.post-image{:alt => "Photo-card-big-1", :src => "assets/test-square.png"}/
+              %p.post-content.separated Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at. Donec imperdiet nibh id metus adipiscing semper.
+              %a.btn.btn-primary.btn-extra.pull-right{:href => "blog/single_post.html"} Read More &gt;
+          .span4
+            .white-card.recent-post.clearfix
+              %h5.recent-post-header
+                %a{:href => "blog/single_post.html"} Nullam velit diam, rhoncus sed
+              .post-info.clearfix
+                .pull-left
+                  %span.post-date January 15, 2011
+                  %a.post-comments{:href => "blog/single_post.html"} 14 Comments
+                .pull-right
+                  %a.post-like{:href => "#"}
+                    %i.icon-heart
+                    250
+              %img.post-image{:alt => "Photo-card-big-2", :src => "assets/test-square.png"}/
+              %p.post-content.separated Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at. Donec imperdiet nibh id metus adipiscing semper.
+              %a.btn.btn-primary.btn-extra.pull-right{:href => "blog/single_post.html"} Read More &gt;
+          .span4
+            .white-card.recent-post.clearfix
+              %h5.recent-post-header
+                %a{:href => "blog/single_post.html"} Nullam velit diam, rhoncus sed
+              .post-info.clearfix
+                .pull-left
+                  %span.post-date January 15, 2011
+                  %a.post-comments{:href => "blog/single_post.html"} 14 Comments
+                .pull-right
+                  %a.post-like{:href => "#"}
+                    %i.icon-heart
+                    250
+              %img.post-image{:alt => "Photo-card-big-6", :src => "assets/test-square.png"}/
+              %p.post-content.separated Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at. Donec imperdiet nibh id metus adipiscing semper.
+              %a.btn.btn-primary.btn-extra.pull-right.post-btn{:href => "blog/single_post.html"} Read More &gt;
+    %section.section-wrapper.stripped
+      .container
+        .row
+          .span12
+            %h3.section-header Payment Plans Information
+            .white-card.no-padding
+              .pricing-table
+                .row
+                  .span3
+                    .pricing-plan-w.first-plan
+                      .plan-name
+                        Free
+                      .plan-price-w
+                        .plan-price-desc Starting at
+                        .plan-price
+                          %span.price-currency $
+                          %span.price-self 0
+                          %span.price-period /mo
+                      .plan-desc
+                        %ul
+                          %li Unlimited bandwidth
+                          %li
+                            %strong 100
+                            Products
+                          %li
+                            %strong 1GB
+                            Storage
+                          %li
+                            %strong 2.0%
+                            Transaction fee
+                        %p Plan Information: In eu libero tortor, et bibendum tellus. Fusce a libero est.
+                        %a.btn.btn-primary.btn-large{:href => "register.html"} Select This Plan
+                  .span3
+                    .pricing-plan-w
+                      .plan-name
+                        Premium
+                      .plan-price-w
+                        .plan-price-desc Starting at
+                        .plan-price
+                          %span.price-currency $
+                          %span.price-self 15
+                          %span.price-period /mo
+                      .plan-desc
+                        %ul
+                          %li Unlimited bandwidth
+                          %li
+                            %strong 500
+                            Products
+                          %li
+                            %strong 3GB
+                            Storage
+                          %li
+                            %strong 1.8%
+                            Transaction fee
+                        %p Plan Information: In eu libero tortor, et bibendum tellus. Fusce a libero est.
+                        %a.btn.btn-primary.btn-large{:href => "register.html"} Select This Plan
+                  .span3
+                    .pricing-plan-w
+                      .plan-name
+                        Enterprise
+                      .plan-price-w
+                        .plan-price-desc Starting at
+                        .plan-price
+                          %span.price-currency $
+                          %span.price-self 25
+                          %span.price-period /mo
+                      .plan-desc
+                        %ul
+                          %li Unlimited bandwidth
+                          %li
+                            %strong 1000
+                            Products
+                          %li
+                            %strong 10GB
+                            Storage
+                          %li
+                            %strong 1.6%
+                            Transaction fee
+                        %p Plan Information: In eu libero tortor, et bibendum tellus. Fusce a libero est.
+                        %a.btn.btn-primary.btn-large{:href => "register.html"} Select This Plan
+                  .span3
+                    .pricing-plan-w.last-plan
+                      .plan-name
+                        Unlimited
+                      .plan-price-w
+                        .plan-price-desc Starting at
+                        .plan-price
+                          %span.price-currency $
+                          %span.price-self 50
+                          %span.price-period /mo
+                      .plan-desc
+                        %ul
+                          %li Unlimited bandwidth
+                          %li
+                            %strong 2000
+                            Products
+                          %li
+                            %strong 20GB
+                            Storage
+                          %li
+                            %strong 1.0%
+                            Transaction fee
+                        %p Plan Information: In eu libero tortor, et bibendum tellus. Fusce a libero est.
+                        %a.btn.btn-primary.btn-large{:href => "register.html"} Select This Plan
+    %footer
+      .pre-footer
+        .container
+          .row
+            .span4
+              .footer-logo
+                %a
+                  Theme
+                  %strong Venera
+              %ul.footer-address
+                %li
+                  %strong Address:
+                  2850 Collins ave
+                  %br/
+                  Camden, NJ 32432-1343, USA
+                %li
+                  %strong Phone:
+                  (324) 234-2343
+                %li
+                  %strong Fax:
+                  (324) 366-5423
+            .span4
+              %h5.footer-header Recent Posts
+              %ul.footer-list
+                %li
+                  %a Vestibulum auctor dapibus
+                %li
+                  %a Aliquam tincidunt mauris
+                %li
+                  %a Lorem ipsum dolor sit
+                %li
+                  %a Consectetur adipisicing elit
+            .span4
+              %h5.footer-header Photostream
+              %ul.footer-img-list.thumbnails
+                %li.span1
+                  %a.thumbnail
+                    %img{:alt => "8b9890", :src => "assets/test-square.png"}/
+                %li.span1
+                  %a.thumbnail
+                    %img{:alt => "8b9890", :src => "assets/test-square.png"}/
+                %li.span1
+                  %a.thumbnail
+                    %img{:alt => "8b9890", :src => "assets/test-square.png"}/
+                %li.span1
+                  %a.thumbnail
+                    %img{:alt => "8b9890", :src => "assets/test-square.png"}/
+                %li.span1
+                  %a.thumbnail
+                    %img{:alt => "8b9890", :src => "assets/test-square.png"}/
+                %li.span1
+                  %a.thumbnail
+                    %img{:alt => "8b9890", :src => "assets/test-square.png"}/
+                %li.span1
+                  %a.thumbnail
+                    %img{:alt => "8b9890", :src => "assets/test-square.png"}/
+                %li.span1
+                  %a.thumbnail
+                    %img{:alt => "8b9890", :src => "assets/test-square.png"}/
+      .deep-footer
+        .container
+          .row
+            .span6
+              .copyright Copyright &copy; 2012 Tamerlan Soziev. All rights reserved.
+            .span6
+              %ul.footer-links
+                %li
+                  %a Some
+                %li
+                  %a Footer
+                %li
+                  %a Policy
+                %li
+                  %a Terms Of Use
+                %li
+                  %a Links

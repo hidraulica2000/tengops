@@ -1,0 +1,37 @@
+class User < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :confirmable,
+  # :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :first_name, :last_name, :gamertag, :birth_date, :email, :password, :password_confirmation, :remember_me
+  # attr_accessible :title, :body
+  validates_presence_of :first_name
+  validate :check_gamertag, :before => :create
+  belongs_to :cover
+  def full_name
+  	first_name + " " + last_name
+  end
+
+  def avatar
+    client = PsnTrophies::Client.new
+    client.get_avatar(self.gamertag)
+  end
+
+  def trophies
+    client = PsnTrophies::Client.new
+    client.trophies_count(self.gamertag).first
+  end
+
+  def check_gamertag
+    client = PsnTrophies::Client.new
+    begin
+      avatar = client.get_avatar(self.gamertag)
+    rescue
+      errors.add(:gamertag,'Verifica tu PSN id, el sistema no pudo encontrarlo')
+    end
+  end
+
+end
