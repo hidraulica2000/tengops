@@ -11,7 +11,20 @@
  *= require_self
  *= require_tree .
  */
-
+.cover{
+  min-width: 1166px;
+  width: 1166px;
+  height: 440px;
+}
+.avatar{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 0px; 
+  bottom: 0px; 
+  top: 67.5%; 
+  left: 45px;
+}
 div#profile_cover #form{
   display: none;
 }

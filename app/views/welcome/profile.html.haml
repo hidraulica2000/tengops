@@ -4,7 +4,7 @@
       .container
         %h1.slider-header= current_user.full_name
         %h2.slider-sub-header
-        #profile_cover.cta{:style=> "position: relative; top: 0; left: 0;"}
+        #profile_cover.cta.cover{:style=> "position: relative; top: 0; left: 0;"}
           - unless @user.cover
             = image_tag("default.jpg")
           - else
@@ -18,9 +18,8 @@
           #psn_info
             %h3{:style=> "position: absolute; bottom: 0px; top: 289px; left: 160px;"} Cargando...
             = image_tag("ajax-loader.gif", :style => "position: absolute; right: 0px; bottom: 0px; top: 340px; left: 75px;", :class => "img-rounded")
-            
-.sub-slider-features
 
+.sub-slider-features            
 %script
   $.ajax({
   url: '#{psn_info_path(params[:id])}',
