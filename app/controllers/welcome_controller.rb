@@ -10,11 +10,15 @@ class WelcomeController < ApplicationController
   end
 
   def cover
-    @covers = Cover.all
+    if @user == current_user
+      @covers = Cover.all
+    else
+      redirect_to profile_path(current_user)
+    end
   end
 
   def cover_selected
-    @user = current_user
+    @user = User.find_by_id(params[:id])
     @user.cover = Cover.find(params[:id])
     if @user.save
       redirect_to profile_path(current_user)

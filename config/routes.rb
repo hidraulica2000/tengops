@@ -1,10 +1,15 @@
 Tengops::Application.routes.draw do
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
   devise_for :users, :controllers => { :registrations => "users" }
   get 'users/:id/profile' => 'welcome#profile', :as => :profile
   get 'psn_info/:id' => 'welcome#psn_info', :as => :psn_info
   get 'users/:id/cover_selection' => 'welcome#cover', :as => :cover
   put 'covers/:id/cover_selected' => 'welcome#cover_selected', :as => :select_cover
   root :to => "welcome#index"
+  resources :news, :only => [:index, :show]
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

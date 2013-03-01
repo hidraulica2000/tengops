@@ -1,0 +1,141 @@
+%section.section-wrapper.posts-w
+  .container
+    .row
+      .span8
+        .row
+          .span8
+            %h3.section-header Noticias
+        .row
+          - @news.each do |news|
+            .span4
+              .white-card.recent-post.clearfix
+                %h5.recent-post-header
+                  %a{:href => "single_post.html"}= news.title
+                .post-info.clearfix
+                  .pull-left
+                    %span.post-date= "Hace #{time_ago_in_words(news.created_at)}"
+                    = #I18n.l news.created_at, :format => :news
+                    %a.post-comments{:href => "single_post.html"} 3 Comentarios
+                  .pull-right
+                    %a.post-like{:href => "#"}
+                      %i.icon-heart
+                      4
+                - if news.attachements.preview.any?
+                  = image_tag(news.attachements.preview.first.url, :class => "post-image")
+                - elsif news.attachements.videop.any?
+                  .post-image
+                    = news.attachements.videop.first.url.html_safe
+                %p.post-content= truncate(news.content , :length => 150, :omission => '...').html_safe
+                = link_to ("Seguir Leyendo &gt;").html_safe, news_path(news), :class => "btn btn-primary btn-extra pull-right"
+        .row
+          .span8
+            %h3.section-header Pagination
+            .pagination
+              %ul
+                %li
+                  %a{:href => "#"} Prev
+                %li.active
+                  %a{:href => "#"} 1
+                %li
+                  %a{:href => "#"} 2
+                %li
+                  %a{:href => "#"} 3
+                %li.visible-desktop-inline
+                  %a{:href => "#"} 4
+                %li.visible-desktop-inline
+                  %a{:href => "#"} 5
+                %li.visible-desktop-inline
+                  %a{:href => "#"} 6
+                %li
+                  %a{:href => "#"} Next
+      .span4
+        .blog-side-bar
+          .blog-side-search.widget-tp
+            %h3
+              %i.icon-search
+              Busca Noticias
+            %form.no-margin-bottom.form-search
+              %fieldset
+                .controls.controls-row
+                  %input.search-input.span4{:placeholder => "Buscar...", :type => "text"}
+          .blog-side-text-block.widget-filled.widget-yellow
+            %h3 Just some text block
+            %p Ut diam arcu, dictum ut vulputate sed, iaculis nec lorem. Fusce pharetra nisl vitae nisl ultricies ut malesuada leo fringilla.
+            %p Sed euismod, metus sed congue rutrum, justo elit malesuada quam, id pulvinar velit massa et justo. Etiam molestie nibh vitae turpis euismod ornare. Etiam dapibus ullamcorper tellus, nec suscipit eros imperdiet id.
+
+%footer
+  .pre-footer
+    .container
+      .row
+        .span4
+          .footer-logo
+            %a
+              Theme
+              %strong Venera
+          %ul.footer-address
+            %li
+              %strong Address:
+              2850 Collins ave
+              %br/
+              Camden, NJ 32432-1343, USA
+            %li
+              %strong Phone:
+              (324) 234-2343
+            %li
+              %strong Fax:
+              (324) 366-5423
+        .span4
+          %h5.footer-header Recent Posts
+          %ul.footer-list
+            %li
+              %a Vestibulum auctor dapibus
+            %li
+              %a Aliquam tincidunt mauris
+            %li
+              %a Lorem ipsum dolor sit
+            %li
+              %a Consectetur adipisicing elit
+        .span4
+          %h5.footer-header Photostream
+          %ul.footer-img-list.thumbnails
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+  .deep-footer
+    .container
+      .row
+        .span6
+          .copyright Copyright &copy; 2012 Tamerlan Soziev. All rights reserved.
+        .span6
+          %ul.footer-links
+            %li
+              %a Some
+            %li
+              %a Footer
+            %li
+              %a Policy
+            %li
+              %a Terms Of Use
+            %li
+              %a Links

@@ -13,6 +13,8 @@ gem 'haml','3.1.7'
 gem 'psn_trophies', git: "https://github.com/tomasherrera/psn_trophies.git"
 gem 'savon', '2.1.0'
 gem 'nori', '2.0.3'
+gem 'activeadmin'
+gem "meta_search", '>= 1.1.0.pre'
 
 # Gems used only for assets and not required
 # in production environments by default.

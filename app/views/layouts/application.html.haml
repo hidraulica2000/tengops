@@ -17,14 +17,14 @@
       %div.navbar-inner
         %div.container
           = link_to "Tengo Playstaton", root_path, class: "brand"
-          %ul.nav   
+          %ul.nav
             - if user_signed_in?
               %li
                 .btn-toolbar2
                   .btn-group
                     %a.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
                       %i.icon-bell
-                    %ul.dropdown-menu                    
+                    %ul.dropdown-menu
                       %hr{:style => "margin-top: 1px; margin-bottom: 2px"}
                       %h6{:style => "text-align: center;"} Más
 
@@ -38,45 +38,45 @@
                       %i.icon-shopping-cart
                     %ul.dropdown-menu
                     / dropdown menu links
-                 
-          %ul.nav.pull-right
-            - if user_signed_in?
-              / - begin
-              - clase = ""              
-              - if params[:action] == "profile"
-                - clase = "active"
-              %li{:class => clase, :id => "profile-navbar"}
-                = link_to image_tag(current_user.avatar, :style => "width: 25px; height:25px") + " #{(current_user.gamertag).camelcase}", profile_path(current_user)
-              / - rescue
-              /   %li.active Error
-              %li= link_to content_tag(:i, nil, :class => "icon-signout") + "Salir", destroy_user_session_path, method: :delete             
-            - else
-              %li= link_to "Ingresar", "#", :class => "top-sign-in"
-              %li= link_to "Registrarme", new_user_registration_path
+          %div.nav-collapse.subnav-collapse.pull-right.collapse{:id=> "top-navigation"}
+            %ul.nav
+              %li{:id => "news-navbar"}= link_to "Noticias", news_index_path
+              - if user_signed_in?
+                - clase = ""
+                - if params[:action] == "profile"
+                  - clase = "active"
+                %li{:class => clase, :id => "profile-navbar"}
+                  = link_to image_tag(current_user.avatar, :style => "width: 25px; height:25px") + " #{(current_user.gamertag).camelcase}", profile_path(current_user)
+                %li= link_to content_tag(:i, nil, :class => "icon-signout") + "Salir", destroy_user_session_path, method: :delete
+              - else
+                .top-account-control.visible-desktop
+                  = link_to "Registrarme", new_user_registration_path, :class => "top-create-account"
+                  = link_to "Ingresar", "#", :class => "top-sign-in"
 
-              .login-box
-                = form_tag user_session_path do
-                  %a.close.login-box-close{:href => "#"} &times;
-                  %h4.login-box-head Formulario de Inicio de Sesión
-                  .control-group
-                    %label Correo Electrónico
-                    = text_field_tag "user[email]", nil, options = {:class =>  "span2", :placeholder => "Correo...", :type => "text"}
-                  .control-group
-                    %label Contraseña
-                    = password_field_tag "user[password]", nil, options = {:class =>  "span2", :placeholder => "Contraseña..."}
-                  .login-actions
-                    %button.btn.btn-primary{:type => "submit", :value => "Iniciar Sesión"} Iniciar Sesión
+
+                .login-box
+                  = form_tag user_session_path do
+                    %a.close.login-box-close{:href => "#"} &times;
+                    %h4.login-box-head Formulario de Inicio de Sesión
+                    .control-group
+                      %label Correo Electrónico
+                      = text_field_tag "user[email]", nil, options = {:class =>  "span2", :placeholder => "Correo...", :type => "text"}
+                    .control-group
+                      %label Contraseña
+                      = password_field_tag "user[password]", nil, options = {:class =>  "span2", :placeholder => "Contraseña..."}
+                    .login-actions
+                      %button.btn.btn-primary{:type => "submit", :value => "Iniciar Sesión"} Iniciar Sesión
     - if flash[:notice]
-      .alert.alert-success
+      .alert.alert-success{:style => "margin-bottom: 0px"}
         %button.close{"data-dismiss" => "alert", :type => "button"} x
         = flash[:notice]
     - if flash[:alert]
-      .alert.alert-error
+      .alert.alert-error{:style => "margin-bottom: 0px"}
         %button.close{"data-dismiss" => "alert", :type => "button"} ×
         = flash[:alert]
     = yield
 %script
-  $('#profile-navbar').hover(
+  $('#profile-navbar, #news-navbar').hover(
   function () {
   $(this).addClass('active');},
   function () {

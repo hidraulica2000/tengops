@@ -1,0 +1,216 @@
+%section.section-wrapper.post-w
+  .container
+    .row
+      .span8
+        .single-post-w
+          %h1.post-title= @new.title
+          %p.post-info
+            %span.info-item
+              por
+              %a{:href => "#"} Tomás Herrera
+            %span.info-item= I18n.l @new.created_at, :format => :news
+            %span.info-item
+              %a{:href => "#"} 3 Comments
+          .single-post-image.bottom.decor-image
+            = @new.attachements.videopost.first.url.html_safe
+          .post-content
+            %p
+              = @new.content.html_safe
+        .post-author-w
+          %h3.section-header About Author
+          .row
+            .span1
+              .post-author-photo.hidden-phone
+                %img{:alt => "Avatar-1", :src => "../assets/images/test-user.png"}/
+            .span7
+              .post-author-bio-w
+                .post-author-name Mario Bolatelli
+                .post-author-bio Nulla semper tincidunt rutrum. Proin consectetur, nisi ac congue accumsan, lorem odio pretium quam, quis vestibulum nunc felis ut turpis. Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum, ac laoreet lorem lacinia et.
+        .post-comments-w
+          %h3.section-header
+            Comments (175)
+            %a.roll-link.roll-red{:href => "#form-add-comment"}
+              %span{"data-title" => "Add yours"} Add yours
+          %ul.post-comments-list
+            %li
+              .row
+                .span1
+                  .comment-author-photo.hidden-phone
+                    %img{:alt => "Avatar-2", :src => "../assets/images/test-user.png"}/
+                .span7
+                  .comment-author
+                    %a.roll-link.roll-red{:href => "#"}
+                      %span{"data-title" => "Jonathan Mayers"} Jonathan Mayers
+                    says
+                  .comment-content Cras et ligula libero. Quisque quis magna vitae ipsum consequat varius in ut ante. Maecenas a mi nibh, eu euismod orci. Vivamus viverra lacus vitae tortor molestie malesuada. In nulla nibh, congue sed molestie nec, dapibus sed purus. Proin consectetur, nisi ac congue accumsan, lorem odio pretium quam, quis vestibulum nunc felis ut turpis. Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum, ac laoreet lorem lacinia et.
+                  .comment-date.pull-left
+                    Posted on Nov 16, 2012 | 10:16 AM EST
+                  %a.roll-link.pull-right.roll-red{:href => "#form-add-comment"}
+                    %span{"data-title" => "Reply"} Reply
+            %li
+              .row
+                .span1
+                  .comment-author-photo.hidden-phone
+                    %img{:alt => "Avatar-4", :src => "../assets/images/test-user.png"}/
+                .span7
+                  .comment-author
+                    %a.roll-link.roll-red{:href => "#"}
+                      %span{"data-title" => "Michael Monson"} Michael Monson
+                    says
+                  .comment-content Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum, ac laoreet lorem lacinia et.
+                  .comment-date.pull-left
+                    Posted on Nov 16, 2012 | 10:16 AM EST
+                  %a.roll-link.pull-right.roll-red{:href => "#form-add-comment"}
+                    %span{"data-title" => "Reply"} Reply
+            %li
+              .row
+                .span1
+                  .comment-author-photo.hidden-phone
+                    %img{:alt => "Avatar-1", :src => "../assets/images/test-user.png"}/
+                .span7
+                  .comment-author
+                    %a.roll-link.roll-red{:href => "#"}
+                      %span{"data-title" => "Mike Stiller"} Mike Stiller
+                    says
+                  .comment-content Sed euismod, metus sed congue rutrum, justo elit malesuada quam, id pulvinar velit massa et justo.
+                  .comment-date.pull-left
+                    Posted on Nov 16, 2012 | 10:16 AM EST
+                  %a.roll-link.pull-right.roll-red{:href => "#form-add-comment"}
+                    %span{"data-title" => "Reply"} Reply
+            %li
+              .row
+                .span1
+                  .comment-reply.hidden-phone
+                    %img{:alt => "Icon-message-reply", :src => "../assets/images/icon-message-reply.png"}/
+                .span1
+                  .comment-author-photo.hidden-phone
+                    %img{:alt => "Avatar-4", :src => "../assets/images/test-user.png"}/
+                .span6
+                  .comment-author
+                    %a.roll-link.roll-red{:href => "#"}
+                      %span{"data-title" => "Michael Monson"} Michael Monson
+                    says
+                  .comment-content Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum, ac laoreet lorem lacinia et.
+                  .comment-date.pull-left
+                    Posted on Nov 16, 2012 | 10:16 AM EST
+                  %a.roll-link.pull-right.roll-red{:href => "#form-add-comment"}
+                    %span{"data-title" => "Reply"} Reply
+            %li
+              .row
+                .span1
+                  .comment-author-photo.hidden-phone
+                    %img{:alt => "Avatar-3", :src => "../assets/images/test-user.png"}/
+                .span7
+                  .comment-author
+                    %a.roll-link.roll-red{:href => "#"}
+                      %span{"data-title" => "Gary Oldbridge"} Gary Oldbridge
+                    says
+                  .comment-content Integer velit mauris, commodo sit amet tempus ac, aliquet nec massa. Donec non lacus sed diam molestie venenatis sollicitudin sit amet metus. Proin consectetur, nisi ac congue accumsan, lorem odio pretium quam, quis vestibulum nunc felis ut turpis. Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum, ac laoreet lorem lacinia et.
+                  .comment-date.pull-left
+                    Posted on Nov 16, 2012 | 10:16 AM EST
+                  %a.roll-link.pull-right.roll-red{:href => "#form-add-comment"}
+                    %span{"data-title" => "Reply"} Reply
+          .white-card.extra-padding
+            %form#form-add-comment.form-transparent
+              %fieldset
+                .row-fluid
+                  .span12
+                    %legend Add your comment
+                  .controls.controls-row
+                    %input.search-input.span6{:placeholder => "Your name", :type => "text"}
+                      %input.search-input.span6{:placeholder => "Your email", :type => "text"}
+                  .controls.controls-row
+                    %textarea.span12{:placeholder => "Your comment", :rows => "6"}
+                  .form-actions
+                    %button.btn.btn-small Submit Comment
+      .span4
+        .blog-side-bar
+          .blog-side-search.widget-tp
+            %h3
+              %i.icon-search
+              Buscar Noticias
+            %form.no-margin-bottom.form-search
+              %fieldset
+                .controls.controls-row
+                  %input.search-input.span4{:placeholder => "Buscar...", :type => "text"}
+
+          .blog-side-text-block.widget-filled.widget-yellow
+            %h3 Just some text block
+            %p Ut diam arcu, dictum ut vulputate sed, iaculis nec lorem. Fusce pharetra nisl vitae nisl ultricies ut malesuada leo fringilla.
+            %p Sed euismod, metus sed congue rutrum, justo elit malesuada quam, id pulvinar velit massa et justo. Etiam molestie nibh vitae turpis euismod ornare. Etiam dapibus ullamcorper tellus, nec suscipit eros imperdiet id.
+%footer
+  .pre-footer
+    .container
+      .row
+        .span4
+          .footer-logo
+            %a
+              Theme
+              %strong Venera
+          %ul.footer-address
+            %li
+              %strong Address:
+              2850 Collins ave
+              %br/
+              Camden, NJ 32432-1343, USA
+            %li
+              %strong Phone:
+              (324) 234-2343
+            %li
+              %strong Fax:
+              (324) 366-5423
+        .span4
+          %h5.footer-header Recent Posts
+          %ul.footer-list
+            %li
+              %a Vestibulum auctor dapibus
+            %li
+              %a Aliquam tincidunt mauris
+            %li
+              %a Lorem ipsum dolor sit
+            %li
+              %a Consectetur adipisicing elit
+        .span4
+          %h5.footer-header Photostream
+          %ul.footer-img-list.thumbnails
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+            %li.span1
+              %a.thumbnail
+                %img{:alt => "8b9890", :src => "http://dummyimage.com/100x100/fff/8b9890"}/
+  .deep-footer
+    .container
+      .row
+        .span6
+          .copyright Copyright &copy; 2012 Tamerlan Soziev. All rights reserved.
+        .span6
+          %ul.footer-links
+            %li
+              %a Some
+            %li
+              %a Footer
+            %li
+              %a Policy
+            %li
+              %a Terms Of Use
+            %li
+              %a Links

@@ -14,8 +14,8 @@ class ApplicationController < ActionController::Base
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end
 
-  def after_sign_in_path_for(resource)
-    profile_path(resource)
-  end
+  #def after_sign_in_path_for(resource)
+   # profile_path(resource) unless resource.class.to_s == "AdminUser"
+  #end
 
 end

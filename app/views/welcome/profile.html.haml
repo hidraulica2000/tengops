@@ -10,16 +10,17 @@
           - else
             = image_tag("covers/#{@user.cover.url_big}")
           #form
-            %form{action: "#{cover_path(current_user)}", style: 'position: absolute; right: 10px; bottom: 30px; top: 370px;'}
-              %button.btn.btn-mini
-                %i.icon-pencil
-                Cambiar
+            - if @user == current_user
+              %form{action: "#{cover_path(current_user)}", style: 'position: absolute; right: 10px; bottom: 30px; top: 370px;'}
+                %button.btn.btn-mini
+                  %i.icon-pencil
+                  Cambiar
 
           #psn_info
             %h3{:style=> "position: absolute; bottom: 0px; top: 289px; left: 160px;"} Cargando...
             = image_tag("ajax-loader.gif", :style => "position: absolute; right: 0px; bottom: 0px; top: 340px; left: 75px;", :class => "img-rounded")
 
-.sub-slider-features            
+.sub-slider-features
 %script
   $.ajax({
   url: '#{psn_info_path(params[:id])}',
