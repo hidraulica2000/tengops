@@ -20,11 +20,11 @@
                     %a.post-like{:href => "#"}
                       %i.icon-heart
                       4
-                - if news.attachements.preview.any?
-                  = image_tag(news.attachements.preview.first.url, :class => "post-image")
-                - elsif news.attachements.videop.any?
+                - if news.attachements.cover.any?
+                  %div.post-image{:style => "width:350px; height:200px; background-repeat:no-repeat; background-size: fit; background-image:url(#{news.attachements.cover.first.url});"}
+                - elsif news.attachements.video.any?
                   .post-image
-                    = news.attachements.videop.first.url.html_safe
+                    = news.attachements.video.first.video_html('350','200',news.attachements.video.first.url,news.title).html_safe
                 %p.post-content= truncate(news.content , :length => 150, :omission => '...').html_safe
                 = link_to ("Seguir Leyendo &gt;").html_safe, news_path(news), :class => "btn btn-primary btn-extra pull-right"
         .row

@@ -12,20 +12,23 @@
             %span.info-item
               %a{:href => "#"} 3 Comments
           .single-post-image.bottom.decor-image
-            = @new.attachements.videopost.first.url.html_safe
+            - if @new.attachements.cover.any?
+              = image_tag(@new.attachements.cover.first.url)
+            - elsif @new.attachements.video.any?
+              = @new.attachements.video.first.video_html('700','393',@new.attachements.video.first.url,@new.title).html_safe
           .post-content
             %p
               = @new.content.html_safe
         .post-author-w
-          %h3.section-header About Author
+          %h3.section-header Acerca del Autor
           .row
             .span1
               .post-author-photo.hidden-phone
-                %img{:alt => "Avatar-1", :src => "../assets/images/test-user.png"}/
+                = image_tag(User.find_by_gamertag("tomaszed91").avatar)
             .span7
               .post-author-bio-w
-                .post-author-name Mario Bolatelli
-                .post-author-bio Nulla semper tincidunt rutrum. Proin consectetur, nisi ac congue accumsan, lorem odio pretium quam, quis vestibulum nunc felis ut turpis. Nullam vulputate euismod urna non pharetra. Phasellus blandit mattis ipsum, ac laoreet lorem lacinia et.
+                .post-author-name= User.find_by_gamertag("tomaszed91").full_name
+                .post-author-bio Tomás Herrera es un desarrollador web amante de los videojuegos y fan de Playstation, tiene 21 años de edad y vive en Barranquilla, Colombia.
         .post-comments-w
           %h3.section-header
             Comments (175)

@@ -3,7 +3,7 @@ ActiveAdmin.register Attachement do
     column :id
     column :new
     column :url
-    column :type
+    column :format
     default_actions
   end
 end
