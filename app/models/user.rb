@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   validates_presence_of :first_name
   validate :check_gamertag, :before => :create
   belongs_to :cover
+  has_many :commentts
   def full_name
   	first_name + " " + last_name
   end

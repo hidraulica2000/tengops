@@ -9,7 +9,9 @@ Tengops::Application.routes.draw do
   get 'users/:id/cover_selection' => 'welcome#cover', :as => :cover
   put 'covers/:id/cover_selected' => 'welcome#cover_selected', :as => :select_cover
   root :to => "welcome#index"
-  resources :news, :only => [:index, :show]
+  resources :news, :only => [:index, :show] do
+    resources :commentts
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

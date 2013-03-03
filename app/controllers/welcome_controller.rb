@@ -1,6 +1,16 @@
 class WelcomeController < ApplicationController
   before_filter :authenticate_user!, :only => [:profile]
 
+  def index
+    if user_signed_in?
+      if current_user.admin
+        @news = New.order("created_at DESC").limit(3).all
+        return
+      end
+    end
+    @news = New.published.order("created_at DESC").limit(3)
+  end
+
   def profile
     @user = User.find_by_id(params[:id])
     unless @user

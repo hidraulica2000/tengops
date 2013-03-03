@@ -6,12 +6,12 @@
 %html.no-js
   / <![endif]
   %head
-    
+
   %body
     /[if lt IE 7]
       <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     %header#header
-      
+
     #homepage-carousel.carousel.slide.over-something
       .carousel-inner.slider-w
         .active.item
@@ -32,10 +32,10 @@
                 %img{:alt => "Browser-window-3", :src => "assets/browser-window.png"}/
         .item
           .container
-            %h1.slider-header I am always on skype, feel free to ask questions.
-            %h2.slider-sub-header Maecenas fermentum sem in nunc sagittis iaculis.
+            %h1.slider-header Aquí puedes comprar, vender, comentar y compartir.
+            %h2.slider-sub-header Si ya tienes una cuenta, ingresa aqui.
             .cta
-              %a.btn.btn-cta.btn-warning{:href => "features/pricing_tables.html"} Some Action Button
+              %a.btn.btn-cta.btn-warning{:href => "features/pricing_tables.html"} Ingresar
             .row.zoomed-browsers-w
               .span4
                 .zoomed-browser
@@ -68,52 +68,12 @@
               %i.icon-cogs
               %h5 Easy to Customize
               %p Vestibulum placerat purus sed nunc tincidunt ultrices et. Vivamus pharetra aliquet nisi non pretium.
-    %section.section-wrapper.under-slider
-      .container
-        .row
-          .span12
-            %h3.section-header Recent Work
-          .span3
-            .white-card
-              .img-w.hover-fader
-                %a{"data-rel" => "lightbox[gallery]", :href => "assets/test-square.png"}
-                  %img{:alt => "Photo-card", :src => "assets/test-square.png"}
-                    %span.hover-fade
-                      %i.icon-zoom-in
-              %h5 Donec et egestas elit.
-              %p Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis.
-          .span3
-            .white-card
-              .img-w.hover-fader
-                %a{"data-rel" => "lightbox[gallery]", :href => "assets/test-square.png"}
-                  %img{:alt => "Photo-card", :src => "assets/test-square.png"}
-                    %span.hover-fade
-                      %i.icon-zoom-in
-              %h5 Donec et egestas elit.
-              %p Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis.
-          .span3
-            .white-card
-              .img-w.hover-fader
-                %a{"data-rel" => "lightbox[gallery]", :href => "assets/test-square.png"}
-                  %img{:alt => "Photo-card", :src => "assets/test-square.png"}
-                    %span.hover-fade
-                      %i.icon-zoom-in
-              %h5 Donec et egestas elit.
-              %p Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis.
-          .span3
-            .white-card
-              .img-w.hover-fader
-                %a{"data-rel" => "lightbox[gallery]", :href => "assets/test-square.png"}
-                  %img{:alt => "Photo-card", :src => "assets/test-square.png"}
-                    %span.hover-fade
-                      %i.icon-zoom-in
-              %h5 Donec et egestas elit.
-              %p Cras metus elit, consectetur sed congue vel, sollicitudin eget odio. Cras lacinia laoreet libero et mattis.
+
     %section.section-wrapper
       .container
         .row
           .span6
-            %h3.section-header Client Testimonials
+            %h3.section-header Tiendas Disponibles
             .testimonials
               .testimonials-users.row.hidden-phone
                 .span1
@@ -178,34 +138,7 @@
                   .speech-by
                     John Doe, Dundler Mufflin
           .span6
-            %h3.section-header Services We Offer
-            #accordion.accordion
-              .accordion-group
-                .accordion-heading
-                  %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseOne"}
-                    Web Development
-                #collapseOne.accordion-body.collapse.in
-                  .accordion-inner
-                    Cras lacinia laoreet libero et mattis. In facilisis neque id lectus hendrerit in dignissim orci rhoncus. Etiam lacinia, mauris sed sagittis laoreet, sapien erat consectetur enim, eget sagittis orci magna at dolor. Donec semper tellus vitae massa laoreet congue. In id elit in turpis fermentum bibendum eget ac nibh.
-              .accordion-group
-                .accordion-heading
-                  %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseTwo"}
-                    Photoshop Website Design
-                #collapseTwo.accordion-body.collapse
-                  .accordion-inner
-                    Cras lacinia laoreet libero et mattis. In facilisis neque id lectus hendrerit in dignissim orci rhoncus. Etiam lacinia, mauris sed sagittis laoreet, sapien erat consectetur enim, eget sagittis orci magna at dolor. Donec semper tellus vitae massa laoreet congue. In id elit in turpis fermentum bibendum eget ac nibh.
-              .accordion-group
-                .accordion-heading
-                  %a.accordion-toggle{"data-parent" => "#accordion", "data-toggle" => "collapse", :href => "#collapseThree"}
-                    Search Engine Optimization
-                #collapseThree.accordion-body.collapse
-                  .accordion-inner
-                    Cras lacinia laoreet libero et mattis. In facilisis neque id lectus hendrerit in dignissim orci rhoncus. Etiam lacinia, mauris sed sagittis laoreet, sapien erat consectetur enim, eget sagittis orci magna at dolor. Donec semper tellus vitae massa laoreet congue. In id elit in turpis fermentum bibendum eget ac nibh.
-    %section.section-wrapper.stripped
-      .container
-        .row.clients-w
-          .span12
-            %h3.section-header Our Clients
+            %h3.section-header Plataformas
           .span2
             .white-card
               %img{:alt => "Client-1", :src => "assets/test-square.png"}/
@@ -215,65 +148,32 @@
           .span2
             .white-card
               %img{:alt => "Client-3", :src => "assets/test-square.png"}/
-          .span2
-            .white-card
-              %img{:alt => "Client-4", :src => "assets/test-square.png"}/
-          .span2
-            .white-card
-              %img{:alt => "Client-5", :src => "assets/test-square.png"}/
-          .span2
-            .white-card
-              %img{:alt => "Client-6", :src => "assets/test-square.png"}/
     %section.section-wrapper.stripped
       .container
         .row
           .span12
-            %h3.section-header From the Blog
-          .span4
-            .white-card.recent-post.clearfix
-              %h5.recent-post-header
-                %a{:href => "blog/single_post.html"} Nullam velit diam, rhoncus sed
-              .post-info.clearfix
-                .pull-left
-                  %span.post-date January 15, 2011
-                  %a.post-comments{:href => "blog/single_post.html"} 14 Comments
-                .pull-right
-                  %a.post-like{:href => "#"}
-                    %i.icon-heart
-                    250
-              %img.post-image{:alt => "Photo-card-big-1", :src => "assets/test-square.png"}/
-              %p.post-content.separated Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at. Donec imperdiet nibh id metus adipiscing semper.
-              %a.btn.btn-primary.btn-extra.pull-right{:href => "blog/single_post.html"} Read More &gt;
-          .span4
-            .white-card.recent-post.clearfix
-              %h5.recent-post-header
-                %a{:href => "blog/single_post.html"} Nullam velit diam, rhoncus sed
-              .post-info.clearfix
-                .pull-left
-                  %span.post-date January 15, 2011
-                  %a.post-comments{:href => "blog/single_post.html"} 14 Comments
-                .pull-right
-                  %a.post-like{:href => "#"}
-                    %i.icon-heart
-                    250
-              %img.post-image{:alt => "Photo-card-big-2", :src => "assets/test-square.png"}/
-              %p.post-content.separated Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at. Donec imperdiet nibh id metus adipiscing semper.
-              %a.btn.btn-primary.btn-extra.pull-right{:href => "blog/single_post.html"} Read More &gt;
-          .span4
-            .white-card.recent-post.clearfix
-              %h5.recent-post-header
-                %a{:href => "blog/single_post.html"} Nullam velit diam, rhoncus sed
-              .post-info.clearfix
-                .pull-left
-                  %span.post-date January 15, 2011
-                  %a.post-comments{:href => "blog/single_post.html"} 14 Comments
-                .pull-right
-                  %a.post-like{:href => "#"}
-                    %i.icon-heart
-                    250
-              %img.post-image{:alt => "Photo-card-big-6", :src => "assets/test-square.png"}/
-              %p.post-content.separated Donec vel turpis non erat luctus ultrices vel sed massa. Quisque commodo venenatis arcu, non volutpat arcu lobortis at. Donec imperdiet nibh id metus adipiscing semper.
-              %a.btn.btn-primary.btn-extra.pull-right.post-btn{:href => "blog/single_post.html"} Read More &gt;
+            %h3.section-header Últimas Noticias
+          - @news.each do |news|
+            .span4
+              .white-card.recent-post.clearfix
+                %h5.recent-post-header
+                  %a{:href => "single_post.html"}= news.title
+                .post-info.clearfix
+                  .pull-left
+                    %span.post-date= "Hace #{time_ago_in_words(news.created_at)}"
+                    = #I18n.l news.created_at, :format => :news
+                    %a.post-comments{:href => "single_post.html"} 3 Comentarios
+                  .pull-right
+                    %a.post-like{:href => "#"}
+                      %i.icon-heart
+                      4
+                - if news.attachements.cover.any?
+                  %div.post-image{:style => "width:350px; height:200px; background-repeat:no-repeat; background-size: fit; background-image:url(#{news.attachements.cover.first.url});"}
+                - elsif news.attachements.video.any?
+                  .post-image
+                    = news.attachements.video.first.video_html('350','200',news.attachements.video.first.url,news.title).html_safe
+                %p.post-content= truncate(news.content , :length => 150, :omission => '...').html_safe
+                = link_to ("Seguir Leyendo &gt;").html_safe, news_path(news), :class => "btn btn-primary btn-extra pull-right"
     %section.section-wrapper.stripped
       .container
         .row
