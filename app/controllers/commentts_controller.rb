@@ -1,4 +1,5 @@
 class CommenttsController < ApplicationController
+  before_filter :authenticate_user!
   def create
     @new = New.find(params[:news_id])
     if current_user != nil

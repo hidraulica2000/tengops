@@ -14,8 +14,13 @@ class ApplicationController < ActionController::Base
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end
 
-  #def after_sign_in_path_for(resource)
-   # profile_path(resource) unless resource.class.to_s == "AdminUser"
-  #end
+  def after_sign_in_path_for(resource)
+   sign_in_url = url_for(:action => 'new', :controller => 'sessions', :only_path => false, :protocol => 'http')
+    if request.referer == sign_in_url
+      super
+    else
+      stored_location_for(resource) || request.referer || root_path
+    end
+  end
 
 end

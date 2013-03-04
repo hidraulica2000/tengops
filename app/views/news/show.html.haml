@@ -60,7 +60,7 @@
                   .controls.controls-row
                     = f.text_area :content, :class => "span12", :placeholder => "Comenta...", :rows => "6", :id => "multi-users"
                   .form-actions
-                    %button.btn.btn-small Comentar
+                    = f.submit "Comentar", :class => "btn btn-small"
 
       .span4
         .blog-side-bar
