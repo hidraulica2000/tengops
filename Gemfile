@@ -16,6 +16,7 @@ gem 'nori', '2.0.3'
 gem 'activeadmin'
 gem "meta_search", '>= 1.1.0.pre'
 gem 'sass-rails',   '~> 3.2.3'
+gem 'twitter-text'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

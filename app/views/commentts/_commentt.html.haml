@@ -1,0 +1,18 @@
+%li
+  .row
+    .span1
+      .comment-author-photo.hidden-phone
+        = image_tag(commentt.user.avatar, :alt => commentt.user.gamertag)
+    .span7
+      .comment-author
+        %a.roll-link.roll-red{:href => "#"}
+          %span{"data-title" => "#{(commentt.user.gamertag).camelcase}"}= commentt.user.full_name.camelcase
+        dijo
+      .comment-content
+        - extract_mentioned_screen_names(commentt.content.to_s).each do |user|
+          - commentt.content = commentt.content.to_s.sub("@"+user, link_to(user, profile_path(User.find_by_gamertag(user)))).html_safe
+        = commentt.content
+      .comment-date.pull-left
+        Publicado el
+        = I18n.l commentt.created_at, :format => :news_comment
+      %a.roll-link.pull-right.roll-red{:href => "#form-add-comment"}

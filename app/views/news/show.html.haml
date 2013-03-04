@@ -34,25 +34,10 @@
             = "Comentarios (#{@new.commentts.count})"
             %a.roll-link.roll-red{:href => "#form-add-comment"}
               %span{"data-title" => "Agrega un comentario"} Agrega un comentario
-          %ul.post-comments-list
-            - @new.commentts.all.each do |comment|
-              %li
-                .row
-                  .span1
-                    .comment-author-photo.hidden-phone
-                      = image_tag(comment.user.avatar, :alt => comment.user.gamertag)
-                  .span7
-                    .comment-author
-                      %a.roll-link.roll-red{:href => "#"}
-                        %span{"data-title" => "#{(comment.user.gamertag).camelcase}"}= comment.user.full_name.camelcase
-                      dijo
-                    .comment-content= comment.content
-                    .comment-date.pull-left
-                      Publicado el
-                      = I18n.l comment.created_at, :format => :news_comment
-                    %a.roll-link.pull-right.roll-red{:href => "#form-add-comment"}
+          %ul.post-comments-list#comment-list
+            = image_tag("loading.gif")
           .white-card.extra-padding
-            = form_for([@new, @new.commentts.build], :id => "form-add-comment form-transparent") do |f|
+            = form_for([@new, @new.commentts.build], :id => "form-add-comment form-transparent", :remote => true) do |f|
               %fieldset
                 .row-fluid
                   .span12
@@ -86,4 +71,24 @@
               %a Terms Of Use
             %li
               %a Links
+- string = ""
+- int = 0
+- User.all.each do |user|
+  - unless int == 0
+    - string.concat(",")
+  - string.concat("{username: '#{user.gamertag}', name: '#{user.full_name}', image: '#{user.avatar}'}")
+  - unless int < User.all.count
+    - string.concat(",")
+  - int += 1
 %script
+  $("#multi-users").mention({
+  delimiter: '@',
+  users: [#{string}]
+  });
+%script
+  $.ajax({
+  url: '#{news_commentts_path(@new)}',
+  success: function(html){
+  $('#comment-list').html(html);
+  }
+  });

@@ -34,5 +34,8 @@ class User < ActiveRecord::Base
       errors.add(:gamertag,'Verifica tu PSN id, el sistema no pudo encontrarlo')
     end
   end
+  def auto_link_username(tweet)
+    tweet.gsub(/@(\w+)/, "@link_to profile_path(User.first)")
+  end
 
 end
