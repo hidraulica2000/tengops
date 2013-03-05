@@ -1,5 +1,5 @@
 class CommenttsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :only => [:create]
   def create
     @new = New.find(params[:news_id])
     if current_user != nil
@@ -19,6 +19,7 @@ class CommenttsController < ApplicationController
   end
   def index
     @new = New.find params[:news_id]
-    @commentts = @new.commentts
+    @comments = @new.commentts
+    render :layout => false
   end
 end
