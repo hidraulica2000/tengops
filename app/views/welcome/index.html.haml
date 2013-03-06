@@ -20,32 +20,32 @@
               Bienvenido
               %strong A
               Tengo Playstation
-            %h2.slider-sub-header Una comunidad para fans de Playstation. Gratis y libre para todos.
+            %h2.slider-sub-header Una comunidad para fans de Playstation. Libre para todos.
             .cta
-              %a.btn.btn-cta{:href => "features/pricing_tables.html"} Registrarme
+              = link_to "Registrarme", new_user_registration_path, :class =>"btn btn-cta"
             .slider-browsers-w.clearfix
               .slider-browser.slider-browser-left.hidden-phone{"data-position-bottom" => "-8%"}
-                %img{:alt => "Browser-window-1", :src => "assets/browser-window.png"}/
+                %img{:alt => "Browser-window-1", :src => "assets/browser-window1.png"}/
               .slider-browser.slider-browser-center{"data-position-bottom" => "-9%"}
-                %img{:alt => "Browser-window-2", :src => "assets/browser-window.png"}/
+                %img{:alt => "Browser-window-2", :src => "assets/browser-window2.png"}/
               .slider-browser.slider-browser-right.hidden-phone{"data-position-bottom" => "-8%"}
-                %img{:alt => "Browser-window-3", :src => "assets/browser-window.png"}/
+                %img{:alt => "Browser-window-3", :src => "assets/browser-window3.png"}/
         .item
           .container
             %h1.slider-header Aquí puedes comprar, vender, comentar y compartir.
             %h2.slider-sub-header Si ya tienes una cuenta, ingresa aqui.
             .cta
-              %a.btn.btn-cta.btn-warning{:href => "features/pricing_tables.html"} Ingresar
+              = link_to "Ingresar", "#", :class =>"btn btn-cta btn-warning top-sign-in"
             .row.zoomed-browsers-w
               .span4
                 .zoomed-browser
-                  %img{:alt => "Browser-window-1", :src => "assets/browser-window.png"}/
+                  %img{:alt => "Browser-window-1", :src => "assets/browser-window4.png"}/
               .span4
                 .zoomed-browser.hidden-phone
-                  %img{:alt => "Browser-window-2", :src => "assets/browser-window.png"}/
+                  %img{:alt => "Browser-window-2", :src => "assets/browser-window5.png"}/
               .span4
                 .zoomed-browser.hidden-phone
-                  %img{:alt => "Browser-window-3", :src => "assets/browser-window.png"}/
+                  %img{:alt => "Browser-window-3", :src => "assets/browser-window6.png"}/
       %a.carousel-control.left{"data-slide" => "prev", :href => "#homepage-carousel"}
         %i.icon-chevron-left
       %a.carousel-control.right{"data-slide" => "next", :href => "#homepage-carousel"}
@@ -55,19 +55,19 @@
         .row
           .span4
             .info-bullet
-              %i.icon-file
-              %h5 Blog Pages Design
-              %p Vestibulum placerat purus sed nunc tincidunt ultrices et. Vivamus pharetra aliquet nisi non pretium.
+              %i.icon-shopping-cart
+              %h5 Compra y vende
+              %p Consigue los juegos o accesorios para tu Playstation que quieras, a los precios que te gustan!.
           .span4
             .info-bullet
-              %i.icon-tags
-              %h5 Responsive Template
-              %p Vestibulum placerat purus sed nunc tincidunt ultrices et. Vivamus pharetra aliquet nisi non pretium.
+              %i.icon-comment
+              %h5 Comenta
+              %p Puedes enterarte de los hechos más recientes del mundo de los videojuegos, asi como comentar y discutir sobre ello.
           .span4
             .info-bullet
-              %i.icon-cogs
-              %h5 Easy to Customize
-              %p Vestibulum placerat purus sed nunc tincidunt ultrices et. Vivamus pharetra aliquet nisi non pretium.
+              %i.icon-facebook-sign
+              %h5 Comparte
+              %p Tengo Playstation está integrado con tus redes sociales para que compartas al mundo todo sobre tu consola favoritas, ventas, compras, y más...
 
     %section.section-wrapper
       .container

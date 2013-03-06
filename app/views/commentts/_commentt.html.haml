@@ -11,7 +11,8 @@
         dijo
       .comment-content
         - extract_mentioned_screen_names(commentt.content.to_s).each do |user|
-          - commentt.content = commentt.content.to_s.sub("@"+user, link_to(user, profile_path(User.find_by_gamertag(user)))).html_safe
+          - unless User.find_by_gamertag(user).blank?
+            - commentt.content = commentt.content.to_s.sub("@"+user, link_to(user, profile_path(User.find_by_gamertag(user)))).html_safe
         = commentt.content
       .comment-date.pull-left
         Publicado el

@@ -1,2 +1,6 @@
-$('#comment-list').append('<%= j render(@comment) %>');
-$('#multi-users').val('');
+<% if @must_login %>
+  location.href = "<%= new_user_session_path %>";
+<% else %>
+  $('#comment-list').append('<%= j render(@comment) %>');
+  $('#multi-users').val('');
+<% end %>

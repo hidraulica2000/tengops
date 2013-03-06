@@ -1,5 +1,4 @@
 class CommenttsController < ApplicationController
-  before_filter :authenticate_user!, :only => [:create]
   def create
     @new = New.find(params[:news_id])
     if current_user != nil
@@ -14,7 +13,8 @@ class CommenttsController < ApplicationController
         redirect_to news_path(@new), :alert => "El comentario no pudo ser enviado"
       end
     else
-      redirect_to new_user_session_path, :alert => "Tienes que iniciar sesion para comentar"
+      @must_login = true
+      flash[:alert] = "Tienes que iniciar sesion para comentar"
     end
   end
   def index

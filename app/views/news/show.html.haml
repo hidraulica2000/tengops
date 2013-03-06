@@ -19,16 +19,6 @@
           .post-content
             %p
               = @new.content.html_safe
-        .post-author-w
-          %h3.section-header Acerca del Autor
-          .row
-            .span1
-              .post-author-photo.hidden-phone
-                = image_tag(User.find_by_gamertag("tomaszed91").avatar)
-            .span7
-              .post-author-bio-w
-                .post-author-name= User.find_by_gamertag("tomaszed91").full_name
-                .post-author-bio Tomás Herrera es un desarrollador web amante de los videojuegos y fan de Playstation, tiene 21 años de edad y vive en Barranquilla, Colombia.
         .post-comments-w
           %h3.section-header
             = "Comentarios (#{@new.commentts.count})"
@@ -36,7 +26,7 @@
               %span{"data-title" => "Agrega un comentario"} Agrega un comentario
           %ul.post-comments-list#comment-list
             = image_tag("loading.gif")
-          .white-card.extra-padding
+          .white-card.extra-padding#form-add-comment
             = form_for([@new, @new.commentts.build], :id => "form-add-comment form-transparent", :remote => true) do |f|
               %fieldset
                 .row-fluid
@@ -58,7 +48,7 @@
     .container
       .row
         .span6
-          .copyright Copyright &copy; 2012 Tamerlan Soziev. All rights reserved.
+          .copyright Copyright &copy; 2013 Tomas Herrera. Todos los derechos reservados.
         .span6
           %ul.footer-links
             %li
@@ -82,6 +72,7 @@
   - int += 1
 %script
   $("#multi-users").mention({
+  queryBy: ['username'],
   delimiter: '@',
   users: [#{string}]
   });

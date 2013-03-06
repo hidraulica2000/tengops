@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   validates_presence_of :first_name
   validate :check_gamertag, :before => :create
+  validates_uniqueness_of :gamertag
   belongs_to :cover
   has_many :commentts
   def full_name
@@ -33,9 +34,6 @@ class User < ActiveRecord::Base
     rescue
       errors.add(:gamertag,'Verifica tu PSN id, el sistema no pudo encontrarlo')
     end
-  end
-  def auto_link_username(tweet)
-    tweet.gsub(/@(\w+)/, "@link_to profile_path(User.first)")
   end
 
 end

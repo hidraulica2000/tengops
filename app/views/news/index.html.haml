@@ -10,12 +10,12 @@
             .span4
               .white-card.recent-post.clearfix
                 %h5.recent-post-header
-                  %a{:href => "single_post.html"}= news.title
+                  = link_to news.title, news_path(news)
                 .post-info.clearfix
                   .pull-left
                     %span.post-date= "Hace #{time_ago_in_words(news.created_at)}"
                     = #I18n.l news.created_at, :format => :news
-                    %a.post-comments{:href => "single_post.html"} 3 Comentarios
+                    = link_to "#{news.commentts.count} Comentarios", news_path(news), :class => "post-comments"
                   .pull-right
                     %a.post-like{:href => "#"}
                       %i.icon-heart
