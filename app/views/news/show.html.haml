@@ -10,7 +10,7 @@
               %a{:href => "#"} Tomás Herrera
             %span.info-item= I18n.l @new.created_at, :format => :news
             %span.info-item
-              %a{:href => "#"} 3 Comments
+              = link_to "#{@new.commentts.count} Comentarios", "#comment-list"
           .single-post-image.bottom.decor-image
             - if @new.attachements.cover.any?
               = image_tag(@new.attachements.cover.first.url)
@@ -19,6 +19,10 @@
           .post-content
             %p
               = @new.content.html_safe
+            .white-card.recent-post.clearfix
+              %div{:id => "like_div_#{@new.id}"}
+                = render :partial => 'like', :locals => {:news => @new}
+
         .post-comments-w
           %h3.section-header
             = "Comentarios (#{@new.commentts.count})"
@@ -72,7 +76,6 @@
   - int += 1
 %script
   $("#multi-users").mention({
-  queryBy: ['username'],
   delimiter: '@',
   users: [#{string}]
   });

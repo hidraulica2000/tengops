@@ -14,4 +14,14 @@ class NewsController < ApplicationController
     @new = New.find(params[:id])
   end
 
+  def like
+    if user_signed_in?
+      @new = New.find(params[:id])
+      current_user.toggle_flag(@new, :like) if user_signed_in?
+    else
+      @must_login = true
+      flash[:alert] = "Tienes que iniciar sesion para calificar"
+    end
+  end
+
 end

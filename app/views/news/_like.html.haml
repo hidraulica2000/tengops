@@ -1,0 +1,6 @@
+= link_to like_news_path(news), :class => "post-like", :remote => true do
+  - if user_signed_in? && current_user.flagged?(news, :like)
+    %i.icon-thumbs-down
+  - else
+    %i.icon-thumbs-up
+  = news.flaggings.count

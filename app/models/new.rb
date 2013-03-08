@@ -3,5 +3,5 @@ class New < ActiveRecord::Base
   scope :published, where(:published => true)
   has_many :attachements
   has_many :commentts
-
+  make_flaggable :like
 end

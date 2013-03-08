@@ -11,7 +11,11 @@ Tengops::Application.routes.draw do
   root :to => "welcome#index"
   resources :news, :only => [:index, :show] do
     resources :commentts
+    member do
+      get 'like'
+    end
   end
+  resources :markets
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

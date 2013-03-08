@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/cavneb/make_flaggable.git
+  revision: 1b09b3bb8a778b5a8f7250c587d59a8e6c205be6
+  specs:
+    make_flaggable (0.1.0)
+      activerecord (>= 3.0.0)
+
+GIT
   remote: https://github.com/tomasherrera/psn_trophies.git
   revision: 59304d2c1e148ba237e2de456101d226a0d74def
   specs:
@@ -205,6 +212,7 @@ DEPENDENCIES
   devise (= 2.2.3)
   haml (= 3.1.7)
   jquery-rails
+  make_flaggable!
   meta_search (>= 1.1.0.pre)
   nori (= 2.0.3)
   omniauth (= 1.1.2)
@@ -214,5 +222,5 @@ DEPENDENCIES
   rails (= 3.2.11)
   sass-rails (~> 3.2.3)
   savon (= 2.1.0)
-  twitter-text
+  twitter-text (= 1.6.0)
   uglifier (>= 1.0.3)

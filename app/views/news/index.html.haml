@@ -17,11 +17,10 @@
                     = #I18n.l news.created_at, :format => :news
                     = link_to "#{news.commentts.count} Comentarios", news_path(news), :class => "post-comments"
                   .pull-right
-                    %a.post-like{:href => "#"}
-                      %i.icon-heart
-                      4
+                    %div{:id => "like_div_#{news.id}"}
+                      = render :partial => 'like', :locals => {:news => news}
                 - if news.attachements.cover.any?
-                  %div.post-image{:style => "width:350px; height:200px; background-repeat:no-repeat; background-size: fit; background-image:url(#{news.attachements.cover.first.url});"}
+                  %div.post-image{:style => "width:100%; height:200px; background-repeat:no-repeat; background-size: fit; background-image:url(#{news.attachements.cover.first.url});"}
                 - elsif news.attachements.video.any?
                   .post-image
                     = news.attachements.video.first.video_html('350','200',news.attachements.video.first.url,news.title).html_safe
