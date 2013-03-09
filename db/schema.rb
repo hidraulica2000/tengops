@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130308221712) do
+ActiveRecord::Schema.define(:version => 20130309155637) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -54,10 +54,23 @@ ActiveRecord::Schema.define(:version => 20130308221712) do
     t.string   "format",     :default => "picture"
   end
 
+  create_table "cities", :force => true do |t|
+    t.integer  "country_id"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "commentts", :force => true do |t|
     t.integer  "new_id"
     t.integer  "user_id"
     t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "countries", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -89,12 +102,12 @@ ActiveRecord::Schema.define(:version => 20130308221712) do
     t.integer  "user_id"
     t.string   "title"
     t.string   "description"
-    t.string   "city"
-    t.string   "country"
     t.string   "cover"
     t.string   "profile_picture"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.integer  "city_id"
+    t.integer  "country_id"
   end
 
   create_table "news", :force => true do |t|

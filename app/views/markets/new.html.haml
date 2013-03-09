@@ -1,0 +1,43 @@
+%body
+  %section.section-wrapper.create-account-page-w
+    .container
+      .row
+        .span9
+          .white-card.extra-padding
+            = form_for(@market) do |f|
+              %fieldset
+                .row-fluid
+                  .span12
+                    %h1.form-header Vive en Estado PLAY
+                .row-fluid
+                  .span12
+                    .form-side-info
+                      %p Bienvenido al Market de Tengo Playstation, llena los siguientes campos para crear tu market y empezar a comerciar.
+                .row
+                  .span4
+                    .control-group
+                      %label Titulo del Market
+                      = f.text_field :title, :autofocus => true, :style => "width: 300px;", :class => "span4", :placeholder => "Titulo que tendrá tu página de market...", :type => "text", :required => true
+                  .span4{:style => "float: right;"}
+                    .control-group
+                      %label Descripcion
+                      = f.text_area :description, :style => "width: 300px;", :class => "span4", :placeholder => "Una pequeña descripción de tu market...", :type => "text", :required => true, :cols => "40", :rows => "5"
+                  .span4
+                    .control-group
+                      %label Ciudad
+                      = f.select :city_id, @cities.collect {|c| [c.name,c.id]}, :autofocus => true, :class => "span4", :required => true
+                .row-fluid
+                  .span12
+                    .form-actions.no-margin-bottom
+                      = f.submit "Empecemos!", :class => "btn btn-primary btn-large"
+        .span3
+          .blog-side-text-block.widget-filled.widget-yellow
+            %h3 Tips:
+            %ul.big-iconed-tips
+              %li
+                %i.icon-credit-card
+                El Registro es 100% Gratuito
+              %li
+                %i.icon-comments
+                Haz parte de una inmensa comunidad de Jugadores
+            %p En Tengo Playstation somos unos fanáticos locos de la consola de Sony desde que salió al mercado en 1994, por ello esperamos que hagas parte de este amor hacia el Gaming y que nunca dejes de jugar.

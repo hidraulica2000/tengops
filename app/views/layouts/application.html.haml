@@ -42,6 +42,7 @@
             %ul.nav
               %li{:id => "news-navbar"}= link_to "Noticias", news_index_path
               - if user_signed_in?
+                %li{:id => "market-navbar"}= link_to "Market", markets_path(current_user)
                 - clase = ""
                 - if params[:action] == "profile"
                   - clase = "active"
@@ -76,7 +77,7 @@
         = flash[:alert]
     = yield
 %script
-  $('#profile-navbar, #news-navbar').hover(
+  $('#profile-navbar, #news-navbar, #market-navbar').hover(
   function () {
   $(this).addClass('active');},
   function () {

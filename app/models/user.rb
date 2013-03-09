@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :gamertag
   belongs_to :cover
   has_many :commentts
+  has_one :market
   make_flagger
   def full_name
   	first_name + " " + last_name

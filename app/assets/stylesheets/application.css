@@ -11,6 +11,9 @@
  *= require_self
  *= require_tree .
  */
+#market_city{
+  width: 315px;
+}
 .mention_image{
   width: 20px;
   height: 20px;

@@ -1,17 +1,36 @@
 class MarketsController < ApplicationController
-
+  before_filter :authenticate_user!
   def index
-    @user = User.find(params[:user])
-    if
-    @market = @user.market
+    @user = current_user
+    if @user.market.present?
+      @market = @user.market
+    else
+      redirect_to new_market_path
+    end
   end
 
   def show
   end
 
   def new
+    @user = current_user
+    if @user.market.present?
+      redirect_to markets_path(@user)
+    else
+      @market = Market.new
+      @cities = Country.first.cities
+    end
+
   end
 
   def create
+    @market = Market.new(params[:market])
+    @market.user = current_user
+    @market.country_id = Country.first.id
+    if @market.save
+      redirect_to root_path, :notice => "Market creado satisfactioriamente"
+    else
+      redirect_to root_path, :alert => "Market no ha sido creado"
+    end
   end
 end
