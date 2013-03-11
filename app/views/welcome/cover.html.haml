@@ -10,5 +10,5 @@
             - @covers.each do |cover|
               %li.span3
                 %h4= cover.title
-                = link_to image_tag("covers/#{cover.url_thumb}", :style => "width: 292px; height: 110px;", "data-rel" => "lightbox[gallery]", :class => "thumbnail with-content"), select_cover_path(cover),:method => :put
+                = link_to image_tag("covers/#{cover.url_thumb}", :style => "width: 292px; height: 110px;", "data-rel" => "lightbox[gallery]"), select_cover_path(cover), :class => "thumbnail with-content",:method => :put
 

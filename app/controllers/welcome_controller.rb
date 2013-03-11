@@ -28,9 +28,8 @@ class WelcomeController < ApplicationController
   end
 
   def cover_selected
-    @user = User.find_by_id(params[:id])
-    @user.cover = Cover.find(params[:id])
-    if @user.save
+    current_user.cover = Cover.find(params[:id])
+    if current_user.save
       redirect_to profile_path(current_user)
     end
   end
