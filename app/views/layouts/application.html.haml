@@ -46,7 +46,7 @@
                 - if params[:action] == "profile"
                   - clase = "active"
                 %li{:class => clase, :id => "profile-navbar"}
-                  = link_to image_tag(current_user.avatar, :style => "width: 25px; height:25px") + " #{(current_user.gamertag).camelcase}", profile_path(current_user)
+                  = link_to image_tag(current_user.avatar, :style => "width: 24px; height:24px") + " #{(current_user.gamertag).camelcase}", profile_path(current_user)
                 %li= link_to content_tag(:i, nil, :class => "icon-signout") + "Salir", destroy_user_session_path, method: :delete
               - else
                 .top-account-control.visible-desktop

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130309155637) do
+ActiveRecord::Schema.define(:version => 20130312210058) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -83,6 +83,18 @@ ActiveRecord::Schema.define(:version => 20130309155637) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "developers", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "esrbs", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "flaggings", :force => true do |t|
     t.string   "flaggable_type"
     t.integer  "flaggable_id"
@@ -97,6 +109,31 @@ ActiveRecord::Schema.define(:version => 20130309155637) do
   add_index "flaggings", ["flag", "flagger_type", "flagger_id", "flaggable_type", "flaggable_id"], :name => "access_flag_flaggings"
   add_index "flaggings", ["flaggable_type", "flaggable_id"], :name => "index_flaggings_on_flaggable_type_and_flaggable_id"
   add_index "flaggings", ["flagger_type", "flagger_id", "flaggable_type", "flaggable_id"], :name => "access_flaggings"
+
+  create_table "games", :force => true do |t|
+    t.string   "game_title"
+    t.date     "release_date"
+    t.text     "overview"
+    t.string   "players"
+    t.string   "coop"
+    t.string   "youtube"
+    t.string   "boxart"
+    t.string   "boxart_thumb"
+    t.string   "boxart_normal"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "platform_id"
+    t.integer  "esrb_id"
+    t.integer  "genre_id"
+    t.integer  "publisher_id"
+    t.integer  "developer_id"
+  end
+
+  create_table "genres", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "markets", :force => true do |t|
     t.integer  "user_id"
@@ -116,6 +153,28 @@ ActiveRecord::Schema.define(:version => 20130309155637) do
     t.datetime "created_at",                    :null => false
     t.datetime "updated_at",                    :null => false
     t.boolean  "published",  :default => false
+  end
+
+  create_table "platforms", :force => true do |t|
+    t.text     "overview"
+    t.string   "developer"
+    t.string   "manufacturer"
+    t.string   "cpu"
+    t.string   "memory"
+    t.string   "graphics"
+    t.string   "display"
+    t.string   "media"
+    t.integer  "max_controllers"
+    t.string   "photo"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "name"
+  end
+
+  create_table "publishers", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|
