@@ -41,7 +41,7 @@
             %ul.nav
               %li{:id => "news-navbar"}= link_to "Noticias", news_index_path
               - if user_signed_in?
-                %li{:id => "market-navbar"}= link_to "Market", markets_path(current_user)
+                %li{:id => "market-navbar"}= link_to "Market", markets_path
                 - clase = ""
                 - if params[:action] == "profile"
                   - clase = "active"
