@@ -16,3 +16,17 @@
           %div{:style => "postition: absolute"}
             = image_tag("marketcover.png", :class => "img-rounded")
             %h2{:style=> "position: absolute; bottom: 0px; top: 300px; left: 410px; color: white"}= @user.market.title
+        %button{"data-target" => "#myModal", "data-toggle" => "modal", :type => "button"} Agregar producto
+#myModal.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+    %h3#myModalLabel Que juego quieres vender?
+  .modal-body
+    = form_tag market_products_path(current_user.market), :method => 'get', remote: true do
+      .input-append
+        = text_field_tag :search, params[:search], :class => "input-append"
+        = submit_tag "Buscar", :name => nil, :class => "btn btn-primary", :disable_with => "Buscando..."
+    #result
+  .modal-footer
+    %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Close
+    %button.btn.btn-primary Save changes

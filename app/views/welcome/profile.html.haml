@@ -21,6 +21,10 @@
             = image_tag("ajax-loader.gif", :style => "position: absolute; right: 0px; bottom: 0px; top: 340px; left: 75px;", :class => "img-rounded")
 
 .sub-slider-features
+  - Game.all.each do |game|
+    - if game.boxart.present?
+      = game.game_title
+      = image_tag(game.boxart_thumb)
 %script
   $.ajax({
   url: '#{psn_info_path(params[:id])}',

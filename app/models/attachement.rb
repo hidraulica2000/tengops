@@ -6,7 +6,8 @@ class Attachement < ActiveRecord::Base
   belongs_to :new
 
   def video_html(x, y, url, name)
-    code = '<video id="video1" class="sublime" width='+ x +' height='+ y +'
+    url = url[/(?<=[?&]v=)[^&$]+/]
+    '<video id="video1" class="sublime" width='+ x +' height='+ y +'
     data-youtube-id='+ url +' data-autoresize="fit" data-uid='+ url +'
     data-name='+ name +' preload="none"> </video>'
   end

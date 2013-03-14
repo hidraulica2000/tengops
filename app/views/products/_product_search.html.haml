@@ -1,0 +1,35 @@
+- if @games == []
+  %blockquote= "No hubo resultados de #{params[:search]}"
+- @games.order("release_date DESC").each do |g|
+  = link_to("#", :class => "thumbnail with-content", :style => "text-decoration: none; margin-bottom: 5px") do
+    .div{:style => "padding: 10px;"}
+      .media
+        .pull-left
+          %div{:style => "width: 120px; text-align: center;"}
+            = image_tag(g.boxart_normal)
+        .media-body
+          %h4.media-heading= g.game_title
+          - if g.release_date.present?
+            %small
+              Fecha Lanzamiento:
+              = I18n.l g.release_date, :format => :r_date
+            %br
+          - if g.developer.present?
+            %small
+              Desarrollado por:
+              = g.developer.name
+            %br
+          - if g.publisher.present?
+            %small
+              Distribuido por:
+              = g.publisher.name
+            %br
+          - if g.esrb.present?
+            %small
+              ESRB:
+              = g.esrb.name
+            %br
+          - if g.genre.present?
+            %small
+              Género:
+              = g.genre.name

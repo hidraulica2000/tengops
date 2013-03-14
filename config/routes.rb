@@ -15,7 +15,9 @@ Tengops::Application.routes.draw do
       get 'like'
     end
   end
-  resources :markets
+  resources :markets do
+    resources :products
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
