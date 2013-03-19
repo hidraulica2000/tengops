@@ -1,0 +1,73 @@
+%section.section-wrapper.create-account-page-w
+  .container
+    .fieldset
+      %legend
+        %i.icon-shopping-cart
+        = @game.game_title
+        \-
+        = @game.platform.name
+    = form_for([current_user.market, @product], :html => {:class => "form-horizontal pull-left"}) do |f|
+      = hidden_field_tag "game", @game.id
+      .control-group
+        %label.control-label Titulo
+        .controls
+          = f.text_field :title, :autofocus => true, :style => "width: 300px;", :class => "span4", :value => "#{@game.game_title}", :type => "text", :required => true
+      .control-group
+        %label.control-label Descripción
+        .controls
+          = f.text_area :description, :style => "width: 300px;", :class => "span4", :placeholder => "Una pequeña descripción del producto...", :type => "text", :required => true, :cols => "40", :rows => "4"
+      .control-group
+        %label.control-label Precio
+        .controls
+          .input-prepend
+            %span.add-on $
+            = f.text_field :price, :style => "width: 273px;", :class => "span2", :type => "text", :required => true
+      .control-group
+        %label.control-label Condición
+        .controls
+          = f.select(:condition, ["Nuevo","Usado"], {:required => true}, :style => "width: 315px")
+      .control-group
+        %label.control-label Notas Adicionales
+        .controls
+          = f.text_area :notes, :style => "width: 300px;", :id => "wysihtml5-textarea", :type => "text", :cols => "40", :rows => "6"
+      .control-group
+        %label.control-label Publicar Inmediatamente
+        .controls
+          = f.check_box :published
+        .controls
+          = check_box_tag "Acepto", :required => true
+          .checkbox.inline{:style => "padding: 0px"}
+            %small Acepto los
+            %small= link_to " Términos y Condiciones ", "#", "data-target" => "#myModal", "data-toggle" => "modal"
+            %small de Tengo Playstation
+      .form-actions.no-margin-bottom
+        = f.submit "Guardar", :class => "btn btn-primary btn-large"
+    .blog-side-text-block.widget-filled.widget-yellow.pull-right{:style => "margin-right: 100px"}
+      %h3 Información del juego
+      = image_tag(@game.boxart_normal, :class => "img-polaroid pull-left", :style => "margin-right: 5px")
+      %ul.unstyled.big-iconed-tips.pull-right
+        %li
+          %i.icon-calendar
+          = @game.release_date.present? ? (I18n.l @game.release_date, :format => :r_date) : "--"
+        %li
+          %i.icon-qrcode
+          = @game.developer.present? ? @game.developer.name : "--"
+        %li
+          %i.icon-globe
+          = @game.publisher.present? ? @game.publisher.name : "--"
+        %li
+          %i.icon-screenshot
+          = @game.genre.present? ? @game.genre.name : "--"
+#myModal.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+    %h3#myModalLabel Términos y condiciones
+  .modal-body{:style => "padding-bottom: 5px"}
+  .modal-body
+    %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere mattis ante sed venenatis. Vestibulum lobortis, dui in malesuada congue, augue quam pharetra eros, a tristique lectus nibh quis leo. Morbi eu massa tortor, ac lobortis lectus. Morbi odio justo, accumsan nec imperdiet quis, malesuada at erat. Quisque nulla est, vehicula sed dapibus eget, mattis ac tellus. Pellentesque feugiat porta justo ut cursus. Nulla adipiscing pharetra mi, sit amet vestibulum magna hendrerit sed. Ut urna nisl, facilisis non ultrices eu, placerat sed quam. Aliquam ut erat non urna convallis sodales. Vivamus cursus nisl a erat hendrerit vulputate. Integer venenatis quam in massa pharetra luctus. Duis at ipsum tellus. Nullam varius mattis nunc, in hendrerit velit sagittis a. Quisque felis augue, dignissim sit amet accumsan vel, tempus et urna. Fusce non eros ullamcorper magna pharetra eleifend sed et turpis.
+    %p Phasellus fermentum velit faucibus justo bibendum vitae ornare augue accumsan. Aliquam aliquet urna eu ligula sodales et congue lorem auctor. Nam in molestie justo. Vestibulum ac lacinia eros. Fusce quis tellus vitae enim rhoncus fringilla id eu nulla. Pellentesque vulputate hendrerit tellus, sit amet varius est placerat in. Sed pharetra lobortis mollis. Fusce in placerat arcu. Etiam pharetra ultrices lacus vitae dapibus. Vivamus aliquam fringilla ipsum, eu vestibulum quam feugiat id. Cras pretium nulla eu arcu sagittis nec imperdiet neque suscipit. Vestibulum massa arcu, vestibulum in euismod ac, sollicitudin id magna. Suspendisse sollicitudin mollis odio, in euismod urna auctor et. Donec tempor condimentum egestas. Nulla dui urna, placerat ut blandit sit amet, aliquet at erat. Proin non nunc a mauris faucibus laoreet in faucibus neque.
+    %p In neque nunc, tempus et tincidunt sed, volutpat quis dui. Donec tempus ornare libero at euismod. Suspendisse potenti. Nulla sit amet tellus quis orci condimentum eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas a nulla arcu, vel adipiscing orci. Duis mattis odio et ante elementum consectetur. Integer quis tempor enim. Nam quis convallis risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas tortor ligula, eleifend quis luctus nec, convallis in diam. Duis auctor tincidunt nisl, sed adipiscing neque congue vel.
+    %p Curabitur pellentesque scelerisque elit at posuere. Pellentesque ut justo felis. Curabitur hendrerit mauris vitae ante vehicula faucibus. Donec quis dolor nec massa sagittis ultricies ut id magna. Nulla sed arcu elit. Etiam nec tempus nisi. Mauris interdum auctor tellus, ac lobortis metus dapibus sed. Phasellus ultrices sodales massa tincidunt semper. Nulla ut nulla non sem aliquam ultricies sit amet nec arcu. Vivamus ac augue turpis. Donec orci odio, commodo vitae lobortis nec, fermentum sed velit. Suspendisse potenti. Ut ut dapibus ipsum.
+    %p Nam eu libero lorem. Curabitur tincidunt ultricies neque, nec dignissim nunc consectetur a. Vivamus eros metus, dictum id pretium sodales, viverra sed est. Maecenas quis leo ut libero dignissim consectetur. Aliquam dignissim arcu sit amet est porttitor at tincidunt ipsum placerat. Donec mollis ultricies quam, at vehicula leo dignissim et. Proin tincidunt mi quis ante vehicula lobortis. Vivamus nec lorem nulla, in molestie arcu. Praesent mi neque, dictum a semper semper, iaculis at velit. Vestibulum gravida ullamcorper mi dignissim luctus.
+  .modal-footer
+    %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Atrás

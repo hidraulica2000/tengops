@@ -218,7 +218,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activeadmin
+  activeadmin (= 0.5.1)
   coffee-rails (~> 3.2.1)
   devise (= 2.2.3)
   gamesdb (= 1.0.4)

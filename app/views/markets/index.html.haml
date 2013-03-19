@@ -3,30 +3,72 @@
     .row-fluid
       .span3
         .blog-side-text-block.widget-filled.widget-yellow
-          %h3 Reputación
+          %h4 Reputación
           %p No existen suficientes calificaciones para determinar la reputación.
         .blog-side-text-block.widget-filled.widget-yellow
-          %h3 Info. de Contacto
+          %h4 Info. Contacto
           %p No se ha ingresado información de contacto aún.
         .blog-side-text-block.widget-filled.widget-yellow
-          %h3 Información de Pago
+          %h4 Info. Pago
           %p No se ha ingresado información de pago aún.
       .span9
         .single-post-w
           %div{:style => "postition: absolute"}
-            = image_tag("marketcover.png", :class => "img-rounded")
-            %h2{:style=> "position: absolute; bottom: 0px; top: 300px; left: 410px; color: white"}= @user.market.title
-        %button{"data-target" => "#myModal", "data-toggle" => "modal", :type => "button"} Agregar producto
-#myModal.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
-  .modal-header
-    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
-    %h3#myModalLabel Que juego quieres vender?
-  .modal-body{:style => "padding-bottom: 5px"}
-    = form_tag market_products_path(current_user.market), :method => 'get', remote: true, :style => "margin-bottom: 0px" do
-      .input-append
-        = text_field_tag :search, params[:search], :class => "input-append"
-        = submit_tag "Buscar", :name => nil, :class => "btn btn-primary", :disable_with => "Buscando..."
-  .modal-body
-    #result
-  .modal-footer
-    %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Cancelar
+            %ul.bxslider
+              %li
+                = image_tag("marketcover.png", :class => "img-rounded")
+              %li
+                = image_tag("marketcover.png", :class => "img-rounded")
+              %li
+                = image_tag("marketcover.png", :class => "img-rounded")
+              %li
+                = image_tag("marketcover.png", :class => "img-rounded")
+
+            %h2{:style=> "position: absolute; bottom: 0px; top: 300px; left: 410px; color: white; height: 40px"}= @user.market.title
+          %ul.nav.nav-pills{:style => "margin-bottom: 10px"}
+            %li
+              = link_to "#", "data-target" => "#myModal", "data-toggle" => "modal" do
+                %i.icon-plus
+                = "Agregar Producto"
+          %ul.thumbnails
+            - @products.order("created_at DESC").each do |p|
+              %li{:style => "width: 157px; margin: 0 10px 10px 0"}
+                .thumbnail{:style => "padding: 10px"}
+                  %h6{:style => "text-align: center", :class => "game_info", "data-title" => "#{p.title}", "data-content" => "Fecha de Lanzamiento: #{p.game.release_date}"}
+                    = truncate(p.title, :length => 24)
+                  = image_tag(p.game.boxart_normal, :class => "thumbnail with-content", :style => "width: 120px; height: 147px; margin-bottom: 10px")
+                  %p{:style => "text-align: center"}= number_to_currency(p.price, :unit => "$")
+                  %div{:style => "text-align: center"}
+                    .btn-group
+                      - if p.published?
+                        %button{:class => "btn btn-inverse btn-mini"}
+                          %i.icon-eye-open
+                      - else
+                        %button{:class => "btn btn-inverse btn-mini"}
+                          %i.icon-eye-close
+                      %button{:class => "btn btn-inverse btn-mini"}
+                        %i.icon-cog
+                      %button{:class => "btn btn-danger btn-mini"}
+                        %i.icon-remove
+
+  #myModal.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+    .modal-header
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+      %h3#myModalLabel Que juego quieres vender?
+    .modal-body{:style => "padding-bottom: 5px"}
+      = form_tag market_products_path(current_user.market), :method => 'get', remote: true, :style => "margin-bottom: 0px" do
+        .input-append
+          = text_field_tag :search, params[:search], :class => "input-append"
+          = submit_tag "Buscar", :name => nil, :class => "btn btn-primary", :disable_with => "Buscando..."
+    .modal-body
+      #result
+    .modal-footer
+      %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Cancelar
+%script
+  $('.game_info').popover({placement: 'bottom', html:true, trigger:'hover'})
+%script
+  $('.btn-danger').popover({ title: 'Atención!', content: 'El producto se eliminará al presionar este botón', html:true, trigger: 'hover' })
+%script
+  $(document).ready(function(){
+  $('.bxslider').bxSlider();
+  });

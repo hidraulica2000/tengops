@@ -4,6 +4,7 @@ class MarketsController < ApplicationController
     @user = current_user
     if @user.market.present?
       @market = @user.market
+      @products = current_user.market.products
     else
       redirect_to new_market_path
     end

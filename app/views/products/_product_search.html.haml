@@ -1,7 +1,7 @@
 - if @games == []
   %blockquote= "No hubo resultados de #{params[:search]}"
 - @games.order("release_date DESC").each do |g|
-  = link_to("#", :class => "thumbnail with-content", :style => "text-decoration: none; margin-bottom: 5px") do
+  = link_to(new_market_product_path(current_user.market, :game => g.id), :class => "thumbnail with-content", :style => "text-decoration: none; margin-bottom: 5px") do
     .div{:style => "padding: 10px;"}
       .media
         .pull-left

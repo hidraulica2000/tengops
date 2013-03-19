@@ -13,7 +13,7 @@ gem 'haml','3.1.7'
 gem 'psn_trophies', git: "https://github.com/tomasherrera/psn_trophies.git"
 gem 'savon', '2.1.0'
 gem 'nori', '2.0.3'
-gem 'activeadmin'
+gem 'activeadmin', '0.5.1'
 gem "meta_search", '>= 1.1.0.pre'
 gem 'sass-rails',   '~> 3.2.3'
 gem 'twitter-text', '1.6.0'

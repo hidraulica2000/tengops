@@ -10,7 +10,7 @@
               %a{:href => "#"} Tomás Herrera
             %span.info-item= I18n.l @new.created_at, :format => :news
             %span.info-item
-              = link_to "#{@new.commentts.count} Comentarios", "#comment-list"
+              = link_to "#{@new.commentts.count} Comentarios", "#comment-list", :class => "scroll"
           .single-post-image.bottom.decor-image
             - if @new.attachements.cover.any?
               = image_tag(@new.attachements.cover.first.url)
@@ -26,7 +26,7 @@
         .post-comments-w
           %h3.section-header
             = "Comentarios (#{@new.commentts.count})"
-            %a.roll-link.roll-red{:href => "#form-add-comment"}
+            %a.roll-link.roll-red.scroll{:href => "#form-add-comment"}
               %span{"data-title" => "Agrega un comentario"} Agrega un comentario
           %ul.post-comments-list#comment-list
             = image_tag("loading.gif")
@@ -85,4 +85,12 @@
   success: function(html){
   $('#comment-list').html(html);
   }
+  });
+%script
+  jQuery(document).ready(function($) {
+
+  $(".scroll").click(function(event){
+  event.preventDefault();
+  $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+  });
   });
