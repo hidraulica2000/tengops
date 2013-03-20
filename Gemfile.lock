@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/tomasherrera/psn_trophies.git
-  revision: 59304d2c1e148ba237e2de456101d226a0d74def
+  revision: 5c3adf1b978865fbe6e273ed153a36aafaf44eb5
   specs:
     psn_trophies (0.0.2)
       nokogiri (~> 1.5.0)
