@@ -33,3 +33,565 @@ ActionView::Template::Error (application.css isn't precompiled):
   app/views/layouts/application.html.haml:5:in `_app_views_layouts_application_html_haml__1471321304229042868_70312957770960'
 
 
+Compiled jquery.js  (4ms)  (pid 13096)
+Compiled jquery-ui.js  (14ms)  (pid 13096)
+Compiled jquery_ujs.js  (1ms)  (pid 13096)
+Compiled active_admin/lib/namespace.js  (337ms)  (pid 13096)
+Compiled active_admin/components/jquery.aa.checkbox-toggler.js  (215ms)  (pid 13096)
+Compiled active_admin/components/jquery.aa.dropdown-menu.js  (237ms)  (pid 13096)
+Compiled active_admin/components/jquery.aa.popover.js  (283ms)  (pid 13096)
+Compiled active_admin/components/jquery.aa.table-checkbox-toggler.js  (195ms)  (pid 13096)
+Compiled active_admin/pages/application.js  (190ms)  (pid 13096)
+Compiled active_admin/pages/batch_actions.js  (323ms)  (pid 13096)
+Compiled active_admin/application.js  (1962ms)  (pid 13096)
+Compiled active_admin/base.js  (2187ms)  (pid 13096)
+Compiled active_admin.js  (2255ms)  (pid 13096)
+Compiled bootstrap.js  (1ms)  (pid 13096)
+Compiled commentts.js  (262ms)  (pid 13096)
+Compiled jquery.bxslider.js  (1ms)  (pid 13096)
+Compiled jquery.bxslider.min.js  (0ms)  (pid 13096)
+Compiled jquery.pnotify.js  (3ms)  (pid 13096)
+Compiled lightbox.js  (3ms)  (pid 13096)
+Compiled main.js  (0ms)  (pid 13096)
+Compiled markets.js  (155ms)  (pid 13096)
+Compiled mention.js  (0ms)  (pid 13096)
+Compiled news.js  (118ms)  (pid 13096)
+Compiled plugins/jquery.easing.1.3.js  (1ms)  (pid 13096)
+Compiled plugins/jquery.fitvids.js  (0ms)  (pid 13096)
+Compiled prettify.js  (0ms)  (pid 13096)
+Compiled products.js  (0ms)  (pid 13096)
+Compiled products_publish.js  (99ms)  (pid 13096)
+Compiled welcome.js  (159ms)  (pid 13096)
+Compiled application.js  (1535ms)  (pid 13096)
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section-header'
+         from line 16 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_forms.css.scss
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 24 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `default-button'
+         from line 65 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `dark-button'
+         from line 181 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_forms.css.scss
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 35 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `default-button'
+         from line 65 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `dark-button'
+         from line 181 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_forms.css.scss
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 44 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 197 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_forms.css.scss
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 56 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 197 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_forms.css.scss
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 44 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 279 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_forms.css.scss
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 56 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 279 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_forms.css.scss
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_popovers.css.scss
+         from line 15 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 62 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_popovers.css.scss
+         from line 15 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section-header'
+         from line 18 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_tables.css.scss
+         from line 16 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 44 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 5 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_dropdown_menu.scss
+         from line 20 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 56 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 5 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_dropdown_menu.scss
+         from line 20 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 83 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_dropdown_menu.scss
+         from line 20 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 96 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_dropdown_menu.scss
+         from line 20 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 24 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `default-button'
+         from line 65 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `dark-button'
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_buttons.scss
+         from line 21 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 35 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `default-button'
+         from line 65 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `dark-button'
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_buttons.scss
+         from line 21 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 44 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_pagination.scss
+         from line 24 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 56 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_pagination.scss
+         from line 24 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 24 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `default-button'
+         from line 15 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_pagination.scss
+         from line 24 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 35 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `default-button'
+         from line 15 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_pagination.scss
+         from line 24 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section-header'
+         from line 28 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section'
+         from line 2 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_panels.scss
+         from line 25 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section-header'
+         from line 28 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_panels.scss
+         from line 25 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 44 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 25 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_table_tools.css.scss
+         from line 29 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 56 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 25 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_table_tools.css.scss
+         from line 29 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 41 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_table_tools.css.scss
+         from line 29 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 84 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_table_tools.css.scss
+         from line 29 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section-header'
+         from line 28 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section'
+         from line 4 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/pages/_dashboard.scss
+         from line 30 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section-header'
+         from line 15 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/pages/_logged_out.scss
+         from line 31 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 18 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/pages/_logged_out.scss
+         from line 31 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section-header'
+         from line 2 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/structure/_title_bar.scss
+         from line 34 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 5 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/structure/_title_bar.scss
+         from line 34 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 44 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 34 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/structure/_title_bar.scss
+         from line 34 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 56 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 34 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/structure/_title_bar.scss
+         from line 34 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+Compiled active_admin.css  (6423ms)  (pid 13096)
+Compiled bootstrap.css  (2ms)  (pid 13096)
+Compiled commentts.css  (2ms)  (pid 13096)
+Compiled jquery.bxslider.css  (0ms)  (pid 13096)
+Compiled jquery.pnotify.default.css  (0ms)  (pid 13096)
+Compiled markets.css  (2ms)  (pid 13096)
+Compiled news.css  (2ms)  (pid 13096)
+Compiled original/blue.css  (1ms)  (pid 13096)
+Compiled original/bootstrap-modified/bootstrap.css  (1ms)  (pid 13096)
+Compiled original/docs.css  (0ms)  (pid 13096)
+Compiled original/lightbox.css  (0ms)  (pid 13096)
+Compiled original/main.css  (0ms)  (pid 13096)
+Compiled original/prettify.css  (0ms)  (pid 13096)
+Compiled original/responsive.css  (0ms)  (pid 13096)
+Compiled products.css  (2ms)  (pid 13096)
+Compiled products_publish.css  (4ms)  (pid 13096)
+Compiled theme_venera.css  (2ms)  (pid 13096)
+Compiled theme_venera_blue.css  (2ms)  (pid 13096)
+Compiled welcome.css  (5ms)  (pid 13096)
+Compiled application.css  (833ms)  (pid 13096)
+Compiled active_admin/print.css  (227ms)  (pid 13096)
+Compiled jquery.js  (8ms)  (pid 13096)
+Compiled jquery-ui.js  (69ms)  (pid 13096)
+Compiled jquery_ujs.js  (22ms)  (pid 13096)
+Compiled active_admin/lib/namespace.js  (288ms)  (pid 13096)
+Compiled active_admin/components/jquery.aa.checkbox-toggler.js  (434ms)  (pid 13096)
+Compiled active_admin/components/jquery.aa.dropdown-menu.js  (603ms)  (pid 13096)
+Compiled active_admin/components/jquery.aa.popover.js  (271ms)  (pid 13096)
+Compiled active_admin/components/jquery.aa.table-checkbox-toggler.js  (247ms)  (pid 13096)
+Compiled active_admin/pages/application.js  (216ms)  (pid 13096)
+Compiled active_admin/pages/batch_actions.js  (237ms)  (pid 13096)
+Compiled active_admin/application.js  (2427ms)  (pid 13096)
+Compiled active_admin/base.js  (2978ms)  (pid 13096)
+Compiled active_admin.js  (3123ms)  (pid 13096)
+Compiled bootstrap.js  (1ms)  (pid 13096)
+Compiled commentts.js  (636ms)  (pid 13096)
+Compiled jquery.bxslider.js  (1ms)  (pid 13096)
+Compiled jquery.bxslider.min.js  (0ms)  (pid 13096)
+Compiled jquery.pnotify.js  (1ms)  (pid 13096)
+Compiled lightbox.js  (1ms)  (pid 13096)
+Compiled main.js  (0ms)  (pid 13096)
+Compiled markets.js  (242ms)  (pid 13096)
+Compiled mention.js  (0ms)  (pid 13096)
+Compiled news.js  (311ms)  (pid 13096)
+Compiled plugins/jquery.easing.1.3.js  (1ms)  (pid 13096)
+Compiled plugins/jquery.fitvids.js  (1ms)  (pid 13096)
+Compiled prettify.js  (1ms)  (pid 13096)
+Compiled products.js  (0ms)  (pid 13096)
+Compiled products_publish.js  (117ms)  (pid 13096)
+Compiled welcome.js  (191ms)  (pid 13096)
+Compiled application.js  (3485ms)  (pid 13096)
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section-header'
+         from line 16 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_forms.css.scss
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 24 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `default-button'
+         from line 65 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `dark-button'
+         from line 181 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_forms.css.scss
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 35 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `default-button'
+         from line 65 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `dark-button'
+         from line 181 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_forms.css.scss
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 44 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 197 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_forms.css.scss
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 56 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 197 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_forms.css.scss
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 44 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 279 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_forms.css.scss
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 56 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 279 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_forms.css.scss
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_popovers.css.scss
+         from line 15 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 62 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_popovers.css.scss
+         from line 15 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section-header'
+         from line 18 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_tables.css.scss
+         from line 16 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 44 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 5 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_dropdown_menu.scss
+         from line 20 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 56 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 5 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_dropdown_menu.scss
+         from line 20 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 83 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_dropdown_menu.scss
+         from line 20 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 96 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_dropdown_menu.scss
+         from line 20 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 24 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `default-button'
+         from line 65 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `dark-button'
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_buttons.scss
+         from line 21 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 35 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `default-button'
+         from line 65 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `dark-button'
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_buttons.scss
+         from line 21 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 44 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_pagination.scss
+         from line 24 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 56 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 11 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_pagination.scss
+         from line 24 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 24 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `default-button'
+         from line 15 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_pagination.scss
+         from line 24 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 35 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `default-button'
+         from line 15 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_pagination.scss
+         from line 24 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section-header'
+         from line 28 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section'
+         from line 2 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_panels.scss
+         from line 25 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section-header'
+         from line 28 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_panels.scss
+         from line 25 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 44 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 25 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_table_tools.css.scss
+         from line 29 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 56 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 25 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_table_tools.css.scss
+         from line 29 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 41 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_table_tools.css.scss
+         from line 29 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 84 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/components/_table_tools.css.scss
+         from line 29 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section-header'
+         from line 28 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section'
+         from line 4 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/pages/_dashboard.scss
+         from line 30 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section-header'
+         from line 15 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/pages/_logged_out.scss
+         from line 31 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 18 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/pages/_logged_out.scss
+         from line 31 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 6 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_sections.css.scss, in `section-header'
+         from line 2 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/structure/_title_bar.scss
+         from line 34 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 5 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/structure/_title_bar.scss
+         from line 34 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 44 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 34 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/structure/_title_bar.scss
+         from line 34 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+WARNING: box-shadow is deprecated and will be removed in the next major version release
+         on line 7 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/bourbon-3.1.1/app/assets/stylesheets/_bourbon-deprecated-upcoming.scss, in `box-shadow'
+         from line 56 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/mixins/_buttons.css.scss, in `light-button'
+         from line 34 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/structure/_title_bar.scss
+         from line 34 of /usr/local/rvm/gems/ruby-1.9.3-p194@tengops/gems/activeadmin-0.5.1/app/assets/stylesheets/active_admin/_base.css.scss
+         from line 12 of /Users/koombea/Google Drive/Dropbox/tengops/app/assets/stylesheets/active_admin.css.scss
+
+Compiled active_admin.css  (5063ms)  (pid 13096)
+Compiled bootstrap.css  (1ms)  (pid 13096)
+Compiled commentts.css  (3ms)  (pid 13096)
+Compiled jquery.bxslider.css  (0ms)  (pid 13096)
+Compiled jquery.pnotify.default.css  (1ms)  (pid 13096)
+Compiled markets.css  (3ms)  (pid 13096)
+Compiled news.css  (2ms)  (pid 13096)
+Compiled original/blue.css  (0ms)  (pid 13096)
+Compiled original/bootstrap-modified/bootstrap.css  (1ms)  (pid 13096)
+Compiled original/docs.css  (0ms)  (pid 13096)
+Compiled original/lightbox.css  (2ms)  (pid 13096)
+Compiled original/main.css  (0ms)  (pid 13096)
+Compiled original/prettify.css  (0ms)  (pid 13096)
+Compiled original/responsive.css  (0ms)  (pid 13096)
+Compiled products.css  (2ms)  (pid 13096)
+Compiled products_publish.css  (3ms)  (pid 13096)
+Compiled theme_venera.css  (3ms)  (pid 13096)
+Compiled theme_venera_blue.css  (3ms)  (pid 13096)
+Compiled welcome.css  (2ms)  (pid 13096)
+Compiled application.css  (801ms)  (pid 13096)
+Compiled active_admin/print.css  (342ms)  (pid 13096)

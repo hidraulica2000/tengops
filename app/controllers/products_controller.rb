@@ -21,8 +21,22 @@ class ProductsController < ApplicationController
   end
 
   def destroy
+    @product = Product.find(params[:id])
+    @product.destroy
+    redirect_to markets_path, alert: 'Producto Eliminado'
   end
 
   def edit
+    @product = Product.find(params[:id])
+    @game = Game.find(params[:game])
+  end
+
+  def update
+    @product = Product.find(params[:id])
+      if @product.update_attributes(params[:product])
+        redirect_to markets_path, notice: 'Producto Actualizado.'
+      else
+        render action: "edit"
+      end
   end
 end

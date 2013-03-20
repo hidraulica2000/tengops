@@ -16,7 +16,9 @@ Tengops::Application.routes.draw do
     end
   end
   resources :markets do
-    resources :products
+    resources :products do
+      resource :action, :controller => :products_publish
+    end
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.

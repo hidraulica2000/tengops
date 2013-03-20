@@ -1,0 +1,55 @@
+%section.section-wrapper.create-account-page-w
+  .container
+    .fieldset
+      %legend
+        %i.icon-shopping-cart
+        = @game.game_title
+        \-
+        = @game.platform.name
+    = form_for([current_user.market, @product], :html => {:class => "form-horizontal pull-left"}) do |f|
+      = hidden_field_tag "game", @game.id
+      .control-group
+        %label.control-label Titulo
+        .controls
+          = f.text_field :title, :autofocus => true, :style => "width: 300px;", :class => "span4", :value => "#{@game.game_title}", :type => "text", :required => true
+      .control-group
+        %label.control-label Descripción
+        .controls
+          = f.text_area :description, :style => "width: 300px;", :class => "span4", :placeholder => "Una pequeña descripción del producto...", :type => "text", :required => true, :cols => "40", :rows => "4"
+      .control-group
+        %label.control-label Precio
+        .controls
+          .input-prepend
+            %span.add-on $
+            = f.text_field :price, :style => "width: 273px;", :class => "span2", :type => "text", :required => true
+      .control-group
+        %label.control-label Condición
+        .controls
+          = f.select(:condition, ["Nuevo","Usado"], {:required => true}, :style => "width: 315px")
+      .control-group
+        %label.control-label Notas Adicionales
+        .controls
+          = f.text_area :notes, :style => "width: 300px;", :id => "wysihtml5-textarea", :type => "text", :cols => "40", :rows => "6"
+      .control-group
+        %label.control-label Publicar
+        .controls
+          = f.check_box :published
+
+      .form-actions.no-margin-bottom
+        = f.submit "Guardar", :class => "btn btn-primary btn-large"
+    .blog-side-text-block.widget-filled.widget-yellow.pull-right{:style => "margin-right: 100px"}
+      %h3 Información del juego
+      = image_tag(@game.boxart_normal, :class => "img-polaroid pull-left", :style => "margin-right: 5px")
+      %ul.unstyled.big-iconed-tips.pull-right
+        %li
+          %i.icon-calendar
+          = @game.release_date.present? ? (I18n.l @game.release_date, :format => :r_date) : "--"
+        %li
+          %i.icon-qrcode
+          = @game.developer.present? ? @game.developer.name : "--"
+        %li
+          %i.icon-globe
+          = @game.publisher.present? ? @game.publisher.name : "--"
+        %li
+          %i.icon-screenshot
+          = @game.genre.present? ? @game.genre.name : "--"
