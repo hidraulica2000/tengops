@@ -23,6 +23,10 @@
             %span.add-on $
             = f.text_field :price, :style => "width: 273px;", :class => "span2", :type => "text", :required => true
       .control-group
+        %label.control-label Unidades
+        .controls
+          = f.number_field :units, :in => 1...100, :value => 10, :required => true, :style => "width: 50px"
+      .control-group
         %label.control-label Condición
         .controls
           = f.select(:condition, ["Nuevo","Usado"], {:required => true}, :style => "width: 315px")

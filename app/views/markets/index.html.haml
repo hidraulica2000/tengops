@@ -30,26 +30,8 @@
               = link_to "#", "data-target" => "#myModal", "data-toggle" => "modal" do
                 %i.icon-plus
                 = "Agregar Producto"
-          %ul.thumbnails
-            - @products.order("created_at DESC").each do |p|
-              %li{:style => "width: 157px; margin: 0 10px 10px 0"}
-                .thumbnail{:style => "padding: 10px"}
-                  %h6{:style => "text-align: center", :class => "game_info", "data-title" => "#{p.title}", "data-content" => "Fecha de Lanzamiento: #{p.game.release_date}"}
-                    = truncate(p.title, :length => 24)
-                  = image_tag(p.game.boxart_normal, :class => "thumbnail with-content", :style => "width: 120px; height: 147px; margin-bottom: 10px")
-                  %p{:style => "text-align: center"}= number_to_currency(p.price, :unit => "$")
-                  %div{:style => "text-align: center"}
-                    .btn-group
-                      - if p.published?
-                        = link_to market_product_action_path(current_user.market, p), method: :put, :class => "btn btn-danger btn-mini" do
-                          %i.icon-ban-circle
-                      - else
-                        = link_to market_product_action_path(current_user.market, p.id), method: :put, :class => "btn btn-primary btn-mini" do
-                          %i.icon-ok
-                      = link_to edit_market_product_path(current_user.market.id, p.id, :game => p.game.id), :class => "btn btn-inverse btn-mini" do
-                        %i.icon-cog
-                      = link_to market_product_path(current_user.market,p), method: :delete, data: { confirm: "Deseas realmente eliminar #{p.title}?, esta acción es irreversible!"}, :class => "btn btn-danger btn-mini" do
-                        %i.icon-remove
+          #products
+            = render :partial => "products/products", :locals => {:products => @products}
 
   #myModal.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
     .modal-header

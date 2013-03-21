@@ -1,0 +1,4 @@
+$('ul.thumbnails').find('li').fadeOut(300, function(){
+  $('#product_<%= @product.id %>').remove();
+  $("ul.thumbnails").find('li').fadeIn(300);
+});

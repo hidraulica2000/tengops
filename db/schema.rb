@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130315204900) do
+ActiveRecord::Schema.define(:version => 20130321181241) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -129,6 +129,8 @@ ActiveRecord::Schema.define(:version => 20130315204900) do
     t.integer  "developer_id"
   end
 
+  add_index "games", ["game_title"], :name => "index_games_on_game_title"
+
   create_table "genres", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -182,6 +184,7 @@ ActiveRecord::Schema.define(:version => 20130315204900) do
     t.datetime "created_at",                                                    :null => false
     t.datetime "updated_at",                                                    :null => false
     t.boolean  "published",                                  :default => false
+    t.integer  "units"
   end
 
   create_table "publishers", :force => true do |t|

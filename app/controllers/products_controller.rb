@@ -12,8 +12,11 @@ class ProductsController < ApplicationController
     @product = Product.new(params[:product])
     @product.market = current_user.market
     @product.game = Game.find(params[:game].to_i)
+    @game = Game.find(params[:game])
     if @product.save
       redirect_to markets_path
+    else
+      render action: "new", alert: "Ocurrieron errores al guardar el producto."
     end
   end
 
@@ -22,8 +25,8 @@ class ProductsController < ApplicationController
 
   def destroy
     @product = Product.find(params[:id])
+    @products = current_user.market.products
     @product.destroy
-    redirect_to markets_path, alert: 'Producto Eliminado'
   end
 
   def edit

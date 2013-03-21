@@ -200,3 +200,6 @@ es:
   activerecord:
     errors:
       <<: *errors
+  products:
+    units: 'Unidades'
+    price: 'Precio'

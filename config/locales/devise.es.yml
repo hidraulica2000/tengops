@@ -21,6 +21,8 @@ es:
       inactive: 'Tu cuenta aun no ha sido activada.'
       admin:
         not_found_in_database: "Correo no se encuentra en la base de datos"
+      user:
+        not_found_in_database: "Usuario no se encuentra en la base de datos"
     sessions:
       signed_in: 'Iniciaste sesión correctamente.'
       signed_out: 'Cerraste sesión correctamente.'

@@ -1,0 +1,15 @@
+%ul.thumbnails
+  - products.order("created_at DESC").each do |p|
+    %li{:style => "width: 157px; margin: 0 10px 10px 0", :id => "product_#{p.id}"}
+      .thumbnail{:style => "padding: 10px; text-align: center"}
+        %h6{:style => "text-align: center", :class => "game_info", "data-title" => "#{p.title}", "data-content" => "Fecha de Lanzamiento: #{p.game.release_date}"}
+          = truncate(p.title, :length => 24)
+        = image_tag(p.game.boxart_normal, :class => "thumbnail with-content", :style => "width: 120px; height: 147px; margin-bottom: 10px")
+        %p
+          = number_to_currency(p.price, :unit => "$")
+        %div{:id => "products_action_#{p.id}"}
+          = render :partial => "products_publish/publish_button", :locals => {:p => p}
+        %span.badge.badge-info{:style => "margin-top: 5px;"}
+          %small
+            = p.units
+            Unidades
