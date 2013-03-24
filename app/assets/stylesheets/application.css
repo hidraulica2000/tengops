@@ -11,6 +11,16 @@
  *= require_self
  *= require_tree .
  */
+#file {
+  display: none;
+}
+.dummyfile input[type="text"] {
+  width: 200px;
+  display: inline;
+}
+.dummyfile a{
+  vertical-align: 0px;
+}
 .cover_hover{
   box-shadow: 0px 0px 3px 2px yellow;
 }

@@ -3,7 +3,7 @@ Tengops::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  devise_for :users, :controllers => { :registrations => "users" }
+  devise_for :users, :controllers => { :registrations => "users/registrations" }
   get 'users/:id/profile' => 'welcome#profile', :as => :profile
   get 'psn_info/:id' => 'welcome#psn_info', :as => :psn_info
   get 'users/:id/cover_selection' => 'welcome#cover', :as => :cover

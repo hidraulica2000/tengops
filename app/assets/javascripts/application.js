@@ -13,3 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$(function (){
+  $(".span4").change(function(e) {
+    window.loadImage(
+        e.target.files[0],
+        function (img) {
+          $(img).css('background-size', 'contain').addClass("img-polaroid");
+          $("#image_preview").html(img);
+        },
+        {maxWidth: 100}
+    );
+  });
+});

@@ -32,7 +32,7 @@
                 = "Agregar Producto"
           #products
             = render :partial => "products/products", :locals => {:products => @products}
-
+            %img{:alt => "Smiley face", :src => "http://205.196.123.170/9vd0x2usypig/a5ip6nb12z8yy2a/playstation_store.png"}
   #myModal.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
     .modal-header
       %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
@@ -48,8 +48,6 @@
       %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Cancelar
 %script
   $('.game_info').popover({placement: 'bottom', html:true, trigger:'hover'})
-%script
-  $('.btn-danger').popover({ title: 'Atención!', content: 'El producto se eliminará al presionar este botón', html:true, trigger: 'hover' })
 %script
   $(document).ready(function(){
   $('.bxslider').bxSlider();

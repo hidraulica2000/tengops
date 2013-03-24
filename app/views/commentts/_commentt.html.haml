@@ -2,7 +2,10 @@
   .row
     .span1
       .comment-author-photo.hidden-phone
-        = image_tag(commentt.user.avatar, :alt => commentt.user.gamertag)
+        - if commentt.user.photo.present?
+          = image_tag(commentt.user.photo, :alt => commentt.user.gamertag)
+        - else
+          = image_tag(commentt.user.avatar, :alt => commentt.user.gamertag)
     .span7
       .comment-author
         %a.roll-link.roll-red{:href => "#"}

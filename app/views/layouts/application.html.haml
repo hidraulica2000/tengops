@@ -11,6 +11,7 @@
     %meta{:content => "width=device-width", :name => "viewport"}
     %link{:href => "http://fonts.googleapis.com/css?family=Abel:400|Oswald:300,400,700", :media => "all", :rel => "stylesheet", :type => "text/css"}
     %link{:href => "assets/jquery.bxslider.css", :rel => "stylesheet"}
+    %script{:href => "assets/load-image.min.js"}
     %script{:src => "//cdn.sublimevideo.net/js/txz0ylvb.js", :type => "text/javascript"}
   %body
     %div.navbar.navbar-fixed-top.navbar-inverse
@@ -94,3 +95,14 @@
   $(this).removeClass('active');
   }
   );
+%script
+  $(document).ready(function(){
+  $('#fileselectbutton').click(function(e){
+  $('#file').trigger('click');
+  });
+  $('#file').change(function(e){
+  var val = $(this).val();
+  var file = val.split(/[\\/]/);
+  $('#filename').val(file[file.length-1]);
+  });
+  });

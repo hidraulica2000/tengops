@@ -1,0 +1,16 @@
+defaults:  &defaults
+  storage:
+    mediafire:
+      api_key: 'vs5iiha1l4df0pta9dkta9l0t8858ykjcs0devlr'
+      app_id: '33648'
+      email: 'tomas.herrera@koombea.com'
+      password: 'tengopsbaguvix'
+      signature: 'a39427b0e3ec2bc9a7aa332769ee553b6d4d6e7e'
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

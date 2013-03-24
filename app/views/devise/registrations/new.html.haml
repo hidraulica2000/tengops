@@ -4,7 +4,7 @@
       .row
         .span9
           .white-card.extra-padding
-            = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+            = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:multipart => true}) do |f|
               - if resource.errors.any?
                 %div.alert.alert-error
                   %h3 Oops!
@@ -57,6 +57,21 @@
                     .control-group
                       %label Confirma tu Contraseña
                       = f.password_field :password_confirmation, :style => "width: 300px;",:class => "span4", :placeholder => "Tu contraseña...otra vez...", :required => true
+                .row
+                  .span4
+                    .control-group
+                      %label Imagen de Perfil
+                      %p.text-error
+                        %small Tamaño maximo: 1 Mb, Sólo .jpg o .png
+                      .dummyfile
+                        %input#filename.input.disabled{:name => "filename", :readonly => "", :type => "text"}
+                          %a#fileselectbutton.btn.btn-primary Seleccionar...
+                    = f.file_field :photo, :style => "width: 300px;",:id => "file",:class => "span4", :placeholder => "Tu contraseña...", :required => true, :accept => "image/png, image/jpeg"
+                  .span4
+                    .control-group
+                      %label Vista previa
+                      #image_preview
+                        No ha cargado ninguna imagen.
                 .row-fluid
                   .span12
                     .form-actions.no-margin-bottom

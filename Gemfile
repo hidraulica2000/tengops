@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "1.9.3"
 gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
@@ -19,6 +19,9 @@ gem 'sass-rails',   '~> 3.2.3'
 gem 'twitter-text', '1.6.0'
 gem 'make_flaggable', :git => 'git://github.com/cavneb/make_flaggable.git'
 gem 'gamesdb', '1.0.4'
+gem 'settingslogic', '2.0.9'
+gem 'rest-client' , '1.6.7'
+gem 'pry', :group => :development
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
