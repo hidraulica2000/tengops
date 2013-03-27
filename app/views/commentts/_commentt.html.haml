@@ -1,4 +1,4 @@
-%li
+%li{:id => "comment_#{commentt.id}"}
   .row
     .span1
       .comment-author-photo.hidden-phone
@@ -18,6 +18,9 @@
             - commentt.content = commentt.content.to_s.sub("@"+user, link_to(user, profile_path(User.find_by_gamertag(user)))).html_safe
         = commentt.content
       .comment-date.pull-left
-        Publicado el
-        = I18n.l commentt.created_at, :format => :news_comment
-
+        Hace
+        = time_ago_in_words(commentt.created_at)
+      - if user_signed_in?
+        - if current_user.admin?
+          = link_to news_commentt_path(@new, commentt), confirm: "Estas seguro?", method: :delete, remote: true, :class => "roll-link pull-right roll-red" do
+            %span{"data-title" => "Eliminar"} Eliminar

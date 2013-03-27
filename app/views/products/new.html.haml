@@ -1,7 +1,7 @@
 %section.section-wrapper.create-account-page-w
   .container
     .fieldset
-      = form_for([current_user.market, @product], :html => {:class => "form-horizontal pull-left"}) do |f|
+      = form_for([current_user.market, @product], :html => {:class => "form-horizontal pull-left"}, :id => 'new_product') do |f|
         - if @product.errors.any?
           %div.alert.alert-error
             %h3 Oops!
@@ -49,7 +49,7 @@
           .controls
             = f.check_box :published
           .controls
-            = check_box_tag "Acepto", :required => true
+            = check_box_tag "accept_checkbox", 1, :required => true
             .checkbox.inline{:style => "padding: 0px"}
               %small Acepto los
               %small= link_to " Términos y Condiciones ", "#", "data-target" => "#myModal", "data-toggle" => "modal"
@@ -85,3 +85,18 @@
     %p Nam eu libero lorem. Curabitur tincidunt ultricies neque, nec dignissim nunc consectetur a. Vivamus eros metus, dictum id pretium sodales, viverra sed est. Maecenas quis leo ut libero dignissim consectetur. Aliquam dignissim arcu sit amet est porttitor at tincidunt ipsum placerat. Donec mollis ultricies quam, at vehicula leo dignissim et. Proin tincidunt mi quis ante vehicula lobortis. Vivamus nec lorem nulla, in molestie arcu. Praesent mi neque, dictum a semper semper, iaculis at velit. Vestibulum gravida ullamcorper mi dignissim luctus.
   .modal-footer
     %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Atrás
+%script
+  $('#new_product').submit(function(){
+  if($("#accept_checkbox").is(':checked')) {
+  return true;
+  } else {
+  alert("No has aceptado los términos y condiciones");
+  return false;
+  }
+  });
+
+
+
+
+
+

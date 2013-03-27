@@ -25,21 +25,25 @@
 
         .post-comments-w
           %h3.section-header
-            = "Comentarios (#{@new.commentts.count})"
+            Comentarios (
+            %span#comments_count= @new.commentts.count
+            )
             %a.roll-link.roll-red.scroll{:href => "#form-add-comment"}
               %span{"data-title" => "Agrega un comentario"} Agrega un comentario
           %ul.post-comments-list#comment-list
-            = image_tag("loading.gif")
+            = image_tag("http://205.196.123.15/hrxv9k69vxkg/e622ns92i7ljegx/loading.gif", "text-align" => "center")
           .white-card.extra-padding#form-add-comment
             = form_for([@new, @new.commentts.build], :id => "form-add-comment form-transparent", :remote => true) do |f|
               %fieldset
                 .row-fluid
                   .span12
                     %legend Agrega un comentario
+                    %p
+                      %small#time-warning.text-error{:style => "margin-bottom: 5px"}
                   .controls.controls-row
-                    = f.text_area :content, :class => "span12", :placeholder => "Comenta...", :rows => "6", :id => "multi-users"
+                    = f.text_area :content, :class => "span12", :placeholder => "Comenta...", :rows => "5", :id => "multi-users"
                   .form-actions
-                    = f.submit "Comentar", :class => "btn btn-small"
+                    = f.submit "Comentar", :disable_with => "Comentando..", :class => "btn btn-primary btn-small"
 
       .span4
         .blog-side-bar
@@ -64,26 +68,21 @@
             %li
               %a Terms Of Use
             %li
-              %a Links
-- string = ""
-- int = 0
-- User.all.each do |user|
-  - unless int == 0
-    - string.concat(",")
-  - string.concat("{username: '#{user.gamertag}', name: '#{user.full_name}', image: '#{user.avatar}'}")
-  - unless int < User.all.count
-    - string.concat(",")
-  - int += 1
+              %a#links Links
 %script
-  $("#multi-users").mention({
-  delimiter: '@',
-  users: [#{string}]
+  $.ajax({
+  url: '#{friends_path}',
+  success: function(html){
+  $('#links').html(html).hide();
+  }
   });
+%script
+  $('#multi-users').maxlength({max: 450});
 %script
   $.ajax({
   url: '#{news_commentts_path(@new)}',
   success: function(html){
-  $('#comment-list').html(html);
+  $('#comment-list').html(html).hide().fadeIn(400);
   }
   });
 %script

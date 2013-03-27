@@ -5,12 +5,12 @@
     = stylesheet_link_tag   "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
+    %link{:href => "http://fonts.googleapis.com/css?family=Abel:400|Oswald:300,400,700", :media => "all", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "assets/jquery.bxslider.css", :rel => "stylesheet"}
     %meta{:charset => "utf-8"}
     %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
     %meta{:content => "", :name => "description"}
     %meta{:content => "width=device-width", :name => "viewport"}
-    %link{:href => "http://fonts.googleapis.com/css?family=Abel:400|Oswald:300,400,700", :media => "all", :rel => "stylesheet", :type => "text/css"}
-    %link{:href => "assets/jquery.bxslider.css", :rel => "stylesheet"}
     %script{:href => "assets/load-image.min.js"}
     %script{:src => "//cdn.sublimevideo.net/js/txz0ylvb.js", :type => "text/javascript"}
   %body
@@ -44,12 +44,24 @@
               %li{:id => "news-navbar"}= link_to "Noticias", news_index_path
               - if user_signed_in?
                 %li{:id => "market-navbar"}= link_to "Market", markets_path
-                - clase = ""
-                - if params[:action] == "profile"
-                  - clase = "active"
-                %li{:class => clase, :id => "profile-navbar"}
-                  = link_to image_tag(current_user.avatar, :style => "width: 24px; height:24px") + " #{(current_user.gamertag).camelcase}", profile_path(current_user)
-                %li= link_to content_tag(:i, nil, :class => "icon-signout") + "Salir", destroy_user_session_path, method: :delete
+                %li.dropdown
+                  %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                    = image_tag(current_user.avatar, :style => "width: 24px; height:24px") + " #{(current_user.gamertag).camelcase}"
+                    %b.caret
+                  %ul.dropdown-menu
+                    %li
+                      = link_to profile_path(current_user) do
+                        %i.icon-user
+                        Mi Perfil
+                    %li
+                      = link_to markets_path do
+                        %i.icon-shopping-cart
+                        Mi Tienda
+                    %li.divider
+                    %li
+                      = link_to destroy_user_session_path, :method => :delete do
+                        %i.icon-signout
+                        Salir
               - else
                 .top-account-control.visible-desktop
                   = link_to "Registrarme", new_user_registration_path, :class => "top-create-account"

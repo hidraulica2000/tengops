@@ -39,6 +39,7 @@ Lightbox
 options = new LightboxOptions
 lightbox = new Lightbox options
 */
+
 (function() {
   var $, Lightbox, LightboxOptions;
 
@@ -47,8 +48,8 @@ lightbox = new Lightbox options
   LightboxOptions = (function() {
 
     function LightboxOptions() {
-      this.fileLoadingImage = 'assets/lightbox/loading.gif';
-      this.fileCloseImage = 'assets/lightbox/close.png';
+      this.fileLoadingImage = '/assets/lightbox/loading.gif';
+      this.fileCloseImage = '/assets/lightbox/close.png';
       this.resizeDuration = 700;
       this.fadeDuration = 500;
       this.labelImage = "Image";
@@ -86,7 +87,8 @@ lightbox = new Lightbox options
         _this = this;
       $("<div>", {
         id: 'lightboxOverlay'
-      }).after($('<div/>', {
+      }).appendTo($('body'));
+      $("#lightboxOverlay").after($('<div/>', {
         id: 'lightbox'
       }).append($('<div/>', {
         "class": 'lb-outerContainer'
@@ -122,7 +124,7 @@ lightbox = new Lightbox options
         "class": 'lb-close'
       }).append($('<img/>', {
         src: this.options.fileCloseImage
-      }))))))).appendTo($('body'));
+      })))))));
       $('#lightboxOverlay').hide().on('click', function(e) {
         _this.end();
         return false;

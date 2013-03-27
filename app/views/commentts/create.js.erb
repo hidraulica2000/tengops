@@ -1,6 +1,13 @@
 <% if @must_login %>
   location.href = "<%= new_user_session_path %>";
 <% else %>
-  $('#comment-list').append('<%= j render(@comment) %>');
-  $('#multi-users').val('');
+  <% if @can_comment %>
+    $('#multi-users').val('');
+    $('#time-warning').html('');
+    $('#legend').remove();
+    $('#comment-list').prepend('<%= j render(@comment) %>').hide().fadeIn(600);
+    $("#comments_count").html('<%= @new.commentts.count %>');
+  <% else %>
+    $('#time-warning').html('No puedes comentar tantas veces seguidas');
+  <% end %>
 <% end %>

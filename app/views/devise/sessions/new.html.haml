@@ -1,0 +1,25 @@
+%section.section-wrapper.create-account-page-w
+  .container
+    .fieldset
+      %legend
+        %i.icon-group
+        Iniciar Sesión
+      = form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => "form-horizontal pull-left"}) do |f|
+        .control-group
+          %label.control-label Correo Electrónico
+          .controls
+            = f.email_field :email, :autofocus => true
+        .control-group
+          %label.control-label Contraseña
+          .controls
+            = f.password_field :password
+        .form-actions.no-margin-bottom
+          - if devise_mapping.rememberable?
+            .control-group
+              %label.control-label Recordar
+              .controls
+                = f.check_box :remember_me
+          %div= f.submit "Iniciar Sesión", :class => "btn btn-primary btn-large"
+        = render "devise/shared/links"
+    %div.pull-right{:style => "margin-left: 40px"}
+      = image_tag("http://205.196.123.9/8snog3qoiipg/ov6p6eyyk3x40bx/signin.jpg")

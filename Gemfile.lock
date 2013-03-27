@@ -75,6 +75,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    delayed_job (3.0.5)
+      activesupport (~> 3.0)
+    delayed_job_active_record (0.4.3)
+      activerecord (>= 2.1.0, < 4)
+      delayed_job (~> 3.0)
     devise (2.2.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -228,6 +233,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin (= 0.5.1)
   coffee-rails (~> 3.2.1)
+  delayed_job_active_record (= 0.4.3)
   devise (= 2.2.3)
   gamesdb (= 1.0.4)
   haml (= 3.1.7)

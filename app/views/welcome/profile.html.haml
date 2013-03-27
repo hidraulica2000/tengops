@@ -2,7 +2,7 @@
   .carousel-inner.slider-w
     .active.item
       .container
-        %h1.slider-header= current_user.full_name
+        %h1.slider-header= @user.full_name
         %h2.slider-sub-header
         #profile_cover.cta.cover{:style=> "position: relative; top: 0; left: 0;"}
           - unless @user.cover
@@ -21,10 +21,6 @@
             = image_tag("ajax-loader.gif", :style => "position: absolute; right: 0px; bottom: 0px; top: 340px; left: 75px;", :class => "img-rounded")
 
 .sub-slider-features
-  - Game.all.each do |game|
-    - if game.boxart.present?
-      = game.game_title
-      = image_tag(game.boxart_thumb)
 %script
   $.ajax({
   url: '#{psn_info_path(params[:id])}',

@@ -8,6 +8,8 @@ Tengops::Application.routes.draw do
   get 'psn_info/:id' => 'welcome#psn_info', :as => :psn_info
   get 'users/:id/cover_selection' => 'welcome#cover', :as => :cover
   put 'covers/:id/cover_selected' => 'welcome#cover_selected', :as => :select_cover
+  get 'friends' => "news#friends", :as => :friends
+  get 'markets' => "markets#index", :as => :markets, :path => "mi_tienda"
   root :to => "welcome#index"
   resources :news, :only => [:index, :show] do
     resources :commentts

@@ -1,5 +1,4 @@
 class NewsController < ApplicationController
-
   def index
     if user_signed_in?
       if current_user.admin
@@ -22,6 +21,11 @@ class NewsController < ApplicationController
       @must_login = true
       flash[:alert] = "Tienes que iniciar sesion para calificar"
     end
+  end
+
+  def friends
+    @friends = current_user.get_friends
+    render :layout => false
   end
 
 end

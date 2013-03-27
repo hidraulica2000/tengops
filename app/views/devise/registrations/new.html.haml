@@ -15,7 +15,7 @@
                         %li
                           - next if msg.nil?
                           - unless attr == :gamertag
-                            = "Contraseña " + msg
+                            = "#{attr} ".capitalize + msg
                           - else
                             = msg
               %fieldset
@@ -78,13 +78,4 @@
                       = f.submit "Completar Registro", :class => "btn btn-primary btn-large"
                 = render "devise/shared/links"
         .span3
-          .blog-side-text-block.widget-filled.widget-yellow
-            %h3 Tips:
-            %ul.big-iconed-tips
-              %li
-                %i.icon-credit-card
-                El Registro es 100% Gratuito
-              %li
-                %i.icon-comments
-                Haz parte de una inmensa comunidad de Jugadores
-            %p En Tengo Playstation somos unos fanáticos locos de la consola de Sony desde que salió al mercado en 1994, por ello esperamos que hagas parte de este amor hacia el Gaming y que nunca dejes de jugar.
+          = image_tag("http://205.196.123.191/pdbulplpjo5g/vug4zck7bm0b2g1/register.jpg")

@@ -1,0 +1,8 @@
+- if user_signed_in?
+  = @friends
+- string = @friends
+%script
+  $("#multi-users").mention({
+  delimiter: '@',
+  users: [#{string}]
+  });
