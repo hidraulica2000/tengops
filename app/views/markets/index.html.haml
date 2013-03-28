@@ -37,16 +37,22 @@
       %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
       %h3#myModalLabel Que juego quieres vender?
     .modal-body{:style => "padding-bottom: 5px"}
-      = form_tag market_products_path(current_user.market), :method => 'get', remote: true, :style => "margin-bottom: 0px" do
+      = form_tag market_products_path(current_user.market), :id => "form1", :method => 'get', remote: true, :style => "margin-bottom: 0px" do
         .input-append
           = text_field_tag :search, params[:search], :class => "input-append"
-          = submit_tag "Buscar", :name => nil, :class => "btn btn-primary", :disable_with => "Buscando..."
+          = submit_tag "Buscar", :name => nil, :class => "btn btn-primary", data: {"disable-with" => "Buscando..."}
     .modal-body
       #result
     .modal-footer
       %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Cancelar
 %script
-  $('.game_info').popover({placement: 'bottom', html:true, trigger:'hover'})
+  $('#search').keyup(function(){
+  if ($(this).val().length >= 3){
+  $("#form1").trigger("submit");
+  }
+  });
+%script
+  $('.game_info').popover({placement: 'bottom', html:true, trigger:'hover'});
 %script
   $(document).ready(function(){
   $('.bxslider').bxSlider();

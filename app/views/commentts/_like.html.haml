@@ -1,0 +1,13 @@
+- tooltip_title = "Me gusta"
+- if user_signed_in?
+  - if current_user.flagged?(commentt, :like)
+    - tooltip_title = "No me gusta"
+= link_to like_news_commentt_path(news, commentt), :disable_with => "...", "data-original-title" => tooltip_title, "data-placement" => "top", "data-toggle" => "tooltip", :id => "example", :class => "btn btn-success btn-mini tool", :remote => true do
+  - if user_signed_in? && current_user.flagged?(commentt, :like)
+    %i.icon-thumbs-down
+  - else
+    %i.icon-thumbs-up
+  %small
+    = commentt.flaggings.count
+%script
+  $('.tool').tooltip();

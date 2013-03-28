@@ -6,7 +6,12 @@
       .media
         .pull-left
           %div{:style => "width: 120px; text-align: center;"}
-            = image_tag(g.boxart_normal)
+            - if g.boxart.present?
+              = image_tag(g.boxart_normal)
+            - elsif g.platform = Platform.find(12)
+              = image_tag(get_link("g4sv12ha8b4i7yj"))
+            - else
+              = image_tag(get_link("fro4d21abqenf0o"))
         .media-body
           %h4.media-heading= g.game_title
           - if g.release_date.present?

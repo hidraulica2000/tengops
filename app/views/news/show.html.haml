@@ -13,7 +13,7 @@
               = link_to "#{@new.commentts.count} Comentarios", "#comment-list", :class => "scroll"
           .single-post-image.bottom.decor-image
             - if @new.attachements.cover.any?
-              = image_tag(@new.attachements.cover.first.url)
+              = image_tag(get_link(@new.attachements.cover.first.url))
             - elsif @new.attachements.video.any?
               = @new.attachements.video.first.video_html('700','393',@new.attachements.video.first.url,@new.title).html_safe
           .post-content
@@ -31,7 +31,7 @@
             %a.roll-link.roll-red.scroll{:href => "#form-add-comment"}
               %span{"data-title" => "Agrega un comentario"} Agrega un comentario
           %ul.post-comments-list#comment-list
-            = image_tag("http://205.196.123.15/hrxv9k69vxkg/e622ns92i7ljegx/loading.gif", "text-align" => "center")
+            = image_tag(get_link("e622ns92i7ljegx"), "text-align" => "center")
           .white-card.extra-padding#form-add-comment
             = form_for([@new, @new.commentts.build], :id => "form-add-comment form-transparent", :remote => true) do |f|
               %fieldset
@@ -71,6 +71,13 @@
               %a#links Links
 %script
   $.ajax({
+  url: '#{news_commentts_path(@new)}',
+  success: function(html){
+  $('#comment-list').html(html).hide().fadeIn(400);
+  }
+  });
+%script
+  $.ajax({
   url: '#{friends_path}',
   success: function(html){
   $('#links').html(html).hide();
@@ -78,13 +85,6 @@
   });
 %script
   $('#multi-users').maxlength({max: 450});
-%script
-  $.ajax({
-  url: '#{news_commentts_path(@new)}',
-  success: function(html){
-  $('#comment-list').html(html).hide().fadeIn(400);
-  }
-  });
 %script
   jQuery(document).ready(function($) {
 

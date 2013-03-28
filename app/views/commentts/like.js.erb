@@ -1,0 +1,5 @@
+<% if @must_login %>
+  location.href = "<%= new_user_session_path %>";
+<% else %>
+  $('#like_div_<%= @comment.id %>').html('<%= j render(:partial => "like", :locals => {:commentt => @comment, :news => @new}) %>');
+<% end %>

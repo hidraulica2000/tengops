@@ -44,4 +44,14 @@ class CommenttsController < ApplicationController
     @comments = @new.commentts.order("created_at desc")
     render :layout => false
   end
+  def like
+    if user_signed_in?
+      @new = New.find params[:news_id]
+      @comment = Commentt.find(params[:id])
+      current_user.toggle_flag(@comment, :like) if user_signed_in?
+    else
+      @must_login = true
+      flash[:alert] = "Tienes que iniciar sesion para calificar"
+    end
+  end
 end

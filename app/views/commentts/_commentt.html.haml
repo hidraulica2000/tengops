@@ -8,10 +8,13 @@
           = image_tag(commentt.user.avatar, :alt => commentt.user.gamertag)
     .span7
       .comment-author
-        %a.roll-link.roll-red{:href => "#"}
-
+        = link_to profile_path(commentt.user), :class => "roll-link roll-red" do
           %span{"data-title" => "#{(commentt.user.gamertag).camelcase}"}= commentt.user.full_name.camelcase
         dijo
+        %div.pull-right{:id => "like_div_#{commentt.id}"}
+          = link_to root_path, :disable_with => "...", :class => "btn btn-danger btn-mini", :remote => true do
+            %i.icon-flag
+          = render :partial => 'like', :locals => {:commentt => commentt, :news => @new}
       .comment-content
         - extract_mentioned_screen_names(commentt.content.to_s).each do |user|
           - unless User.find_by_gamertag(user).blank?

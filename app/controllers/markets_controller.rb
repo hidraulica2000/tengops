@@ -29,7 +29,7 @@ class MarketsController < ApplicationController
     @market.user = current_user
     @market.country_id = Country.first.id
     if @market.save
-      redirect_to root_path, :notice => "Market creado satisfactioriamente"
+      redirect_to markets_path(current_user), :notice => "Market creado satisfactioriamente"
     else
       redirect_to root_path, :alert => "Market no ha sido creado"
     end

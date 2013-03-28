@@ -8,7 +8,7 @@ class Game < ActiveRecord::Base
 
   def self.search(search)
     if search
-      where(["UNACCENT(LOWER(game_title)) LIKE UNACCENT(?)", "%#{search.to_s.downcase}%"])
+      where(["UNACCENT(LOWER(game_title)) LIKE UNACCENT(?)", "%#{search.to_s.downcase}%"]).limit(20)
     end
   end
 end

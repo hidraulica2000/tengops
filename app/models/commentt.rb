@@ -3,4 +3,5 @@ class Commentt < ActiveRecord::Base
   validates_presence_of :content
   belongs_to :new
   belongs_to :user
+  make_flaggable :like
 end
