@@ -46,11 +46,11 @@
     .modal-footer
       %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Cancelar
 %script
-  $('#search').keyup(function(){
+  $('#search').bindWithDelay("keyup", function(){
   if ($(this).val().length >= 3){
   $("#form1").trigger("submit");
   }
-  });
+  }, 250);
 %script
   $('.game_info').popover({placement: 'bottom', html:true, trigger:'hover'});
 %script
