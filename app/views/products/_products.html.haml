@@ -4,7 +4,10 @@
       .thumbnail{:style => "padding: 10px; text-align: center"}
         %h6{:style => "text-align: center", :class => "game_info", "data-title" => "#{p.title}", "data-content" => "Fecha de Lanzamiento: #{p.game.release_date}"}
           = truncate(p.title, :length => 24)
-        = image_tag(p.game.boxart_normal, :class => "thumbnail with-content", :style => "width: 120px; height: 147px; margin-bottom: 10px")
+        - if p.game.boxart.length <= 20
+          = image_tag(get_link(p.game.boxart_normal), :class => "thumbnail with-content", :style => "width: 120px; height: 147px; margin-bottom: 10px")
+        - else
+          = image_tag(p.game.boxart_normal, :class => "thumbnail with-content", :style => "width: 120px; height: 147px; margin-bottom: 10px")
         %p
           = number_to_currency(p.price, :unit => "$")
         %div{:id => "products_action_#{p.id}"}

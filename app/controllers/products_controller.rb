@@ -4,8 +4,13 @@ class ProductsController < ApplicationController
   end
 
   def new
-    @product = Product.new
     @game = Game.find(params[:game])
+    if @game.boxart.length >= 20
+      @cover = @game.boxart_normal
+    else
+      @cover = ApplicationController.helpers.get_link(@game.boxart_normal)
+    end
+    @product = Product.new
   end
 
   def create

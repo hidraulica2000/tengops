@@ -4,4 +4,6 @@ class Market < ActiveRecord::Base
   has_one :country
   has_one :city
   has_many :products
+  has_one :contact_info
+  has_one :payment_info
 end

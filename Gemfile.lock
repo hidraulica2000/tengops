@@ -241,6 +241,7 @@ DEPENDENCIES
   make_flaggable!
   meta_search (>= 1.1.0.pre)
   nori (= 2.0.3)
+  oauth2
   omniauth (= 1.1.2)
   omniauth-facebook (= 1.4.1)
   pg (= 0.14.1)

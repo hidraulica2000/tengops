@@ -15,7 +15,10 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-   sign_in_url = url_for(:action => 'new', :controller => 'sessions', :only_path => false, :protocol => 'http')
+    avatar = resource.get_avatar
+    current_user.avatar = avatar
+    current_user.save
+    sign_in_url = url_for(:action => 'new', :controller => 'sessions', :only_path => false, :protocol => 'http')
     if request.referer == sign_in_url
       super
     else

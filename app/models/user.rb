@@ -17,13 +17,24 @@ class User < ActiveRecord::Base
   belongs_to :cover
   has_many :commentts
   has_one :market
+  has_many :authentications, :dependent => :delete_all
   make_flagger
+
+  def apply_omniauth(auth)
+    authentications.build(:provider => auth['provider'], :uid => auth['uid'], :token => auth['credentials']['token'])
+  end
+
+  def fb_profile_picture
+    fb_authentication = Authentication.find_by_provider_and_user_id('facebook', self.id.to_s)
+    token = fb_authentication.token
+    picture = "https://graph.facebook.com/me/picture?access_token=#{token}&width=200&height=200"
+  end
 
   def full_name
   	first_name + " " + last_name
   end
 
-  def avatar
+  def get_avatar
     client = PsnTrophies::Client.new
     client.get_avatar(self.gamertag)
   end

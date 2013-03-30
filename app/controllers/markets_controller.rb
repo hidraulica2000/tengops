@@ -2,6 +2,10 @@ class MarketsController < ApplicationController
   before_filter :authenticate_user!
   def index
     @user = current_user
+    @fb_authentication = Authentication.find_by_provider_and_user_id('facebook', @user.id.to_s)
+    if @fb_authentication
+      @fb_picture = @user.fb_profile_picture
+    end
     if @user.market.present?
       @market = @user.market
       @products = current_user.market.products

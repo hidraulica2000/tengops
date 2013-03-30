@@ -7,7 +7,10 @@
         .pull-left
           %div{:style => "width: 120px; text-align: center;"}
             - if g.boxart.present?
-              = image_tag(g.boxart_normal)
+              - if g.boxart.length >= 20
+                = image_tag(g.boxart_normal)
+              - else
+                = image_tag(get_link(g.boxart_thumb))
             - elsif g.platform = Platform.find(12)
               = image_tag(get_link("g4sv12ha8b4i7yj"))
             - else

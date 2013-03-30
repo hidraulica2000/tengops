@@ -9,6 +9,7 @@ Tengops::Application.routes.draw do
   get 'users/:id/cover_selection' => 'welcome#cover', :as => :cover
   put 'covers/:id/cover_selected' => 'welcome#cover_selected', :as => :select_cover
   get 'friends' => "news#friends", :as => :friends
+  match '/auth/:provider/callback' => 'authentications#create'
   root :to => "welcome#index"
   resources :news, :only => [:index, :show] do
     resources :commentts do
@@ -21,6 +22,8 @@ Tengops::Application.routes.draw do
     end
   end
   resources :markets do
+    resources :contact_infos
+    resources :payment_infos
     resources :products do
       resource :action, :controller => :products_publish
     end
