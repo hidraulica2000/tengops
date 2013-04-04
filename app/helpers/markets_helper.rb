@@ -1,5 +1,5 @@
 module MarketsHelper
   def current_market
-    Market.find(params[:market_id])
+    current_user.market
   end
 end

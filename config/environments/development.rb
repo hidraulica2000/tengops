@@ -31,7 +31,9 @@ Tengops::Application.configure do
 
   # Do not compress assets
   config.assets.compress = false
-
+  config.active_record.default_timezone = :local
+  config.active_record.time_zone_aware_attributes = false
+  config.time_zone = 'Bogota'
   # Expands the lines which load the assets
   config.assets.debug = true
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }

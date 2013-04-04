@@ -1,36 +1,59 @@
+/= current_user.fb_groups
 %body{:style => "margin-top: 40px;"}
   .container-fluid
     .row-fluid
       .span3
-        - if @fb_authentication
-          .blog-side-text-block.widget-filled.widget-yellow
-            %h3 Foto de Perfil
-            = image_tag(@fb_picture)
         .blog-side-text-block.widget-filled.widget-yellow
-          %h3 Social
-          - unless @fb_authentication
-            = link_to '/auth/facebook/', :class => "btn btn-inverse btn-block" do
-              %i.icon-facebook
-              = "Conectar con Facebook"
-          = link_to root_path, :class => "btn btn-primary btn-block" do
-            %i.icon-twitter
-            = "Conectar con Twitter"
-          = link_to root_path, :class => "btn btn-danger btn-block" do
-            %i.icon-google-plus
-            = "Conectar con Google Plus"
-        .blog-side-text-block.widget-filled.widget-yellow
-          %h4 Reputación
-          %p No existen suficientes calificaciones para determinar la reputación.
-        .blog-side-text-block.widget-filled.widget-yellow
-          %h4 Info. Contacto
-          %p No se ha ingresado información de contacto aún.
-        .blog-side-text-block.widget-filled.widget-yellow
-          %h4 Info. Pago
-          %p No se ha ingresado información de pago aún.
+          - if @fb_authentication
+            %div{:style => "text-align: center; margin-bottom: 20px"}
+              = image_tag(@fb_picture, :alt => current_user.full_name, :class => "img-polaroid")
+          %div{:style => "margin-bottom: 20px"}
+            %h3 Info. Contacto
+            - unless current_market.contact_info
+              = link_to new_market_contact_info_path(@market), :class => "btn btn-link btn-small" do
+                %i.icon-pencil
+                = "Ingresar información de contacto"
+            - else
+              %ul.unstyled.big-iconed-tips
+                - unless current_market.contact_info.facebook == ''
+                  - id = current_market.contact_info.facebook
+                  %li
+                    %i.icon-facebook-sign
+                    = link_to current_market.get_name(current_user.fb_token, id), current_market.group_link(id), :target => "blank"
+                - unless current_market.contact_info.twitter == ''
+                  %li
+                    %i.icon-twitter-sign
+                    = link_to @screen_name, 'https://www.twitter.com/' + @screen_name, :target => "blank"
+                - if @google_authentication
+                  %li
+                    - begin
+                      %i.icon-google-plus-sign
+                      = link_to current_user.google_info['nickname'], 'https://plus.google.com/' + current_user.google_info['id'], :target => 'blank'
+                    - rescue
+                      %i.icon-warning-sign
+                      = link_to 'Ha ocurrido un error','#', :class => 'error_auth', "data-title" => "Error", "data-content" => "Ha habido un error al autenticar tu cuenta de Google Plus.", "data-placement" => "right", "data-target" => "#error", "data-toggle" => "modal"
+                - unless current_market.contact_info.whatsapp == ''
+                  %li
+                    = image_tag "whatsapp.svg", :style => "width: 25px; height: 18px"
+                    = current_market.contact_info.whatsapp
+                - unless current_market.contact_info.phone == ''
+                  %li
+                    %i.icon-phone-sign
+                    = current_market.contact_info.phone
+                - unless current_market.contact_info.cellphone == ''
+                  %li
+                    %i.icon-rss
+                    = current_market.contact_info.cellphone
+                %small
+                  = link_to edit_market_contact_info_path(@market, @market.contact_info), :class => "btn btn-link btn-small" do
+                    %i.icon-pencil
+                    = "Editar información de contacto"
+          %h3 Info. Pago
+          = link_to new_market_payment_info_path(@market), :class => "btn btn-link btn-small" do
+            %i.icon-pencil
+            = "Ingresar información de pago"
       .span9
         .single-post-w
-          .hero.unit
-            %h1= @market.title
           %ul.nav.nav-pills{:style => "margin-bottom: 10px"}
             %li
               = link_to "#", "data-target" => "#myModal", "data-toggle" => "modal" do
@@ -52,6 +75,21 @@
     .modal-footer
       = link_to "No encontraste lo que buscas?", root_path, :class => "pull-left", :style => "text-decoration: none;"
       %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Cancelar
+  #error.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+    .modal-header
+      %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+      %h3#myModalLabel Oops!
+    .modal-body{:style => "padding-bottom: 5px"}
+      %p Ha ocurrido un error al autenticar tu cuenta de Google Plus. Esto puede deberse a varios motivos:
+      %ul
+        %li Has revocado el acceso a Tengo Playstation en las configuraciones de tu cuenta Google +.
+        %li Los servidores de Google se encuentran inhabilitados temporalmente.
+        %li Ha habido una excepción desconocida.
+      %p Puedes intentar reautenticar tu cuenta nuevamente, si no funciona intenta más tarde.
+      = link_to 'Reautenticar', reauthenticate_path(@google_authentication), :class => "btn btn-danger btn-block"
+    .modal-footer
+      = link_to "No encontraste lo que buscas?", root_path, :class => "pull-left", :style => "text-decoration: none;"
+      %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Cancelar
 %script
   $('#search').bindWithDelay("keyup", function(){
   if ($(this).val().length >= 3){
@@ -59,7 +97,7 @@
   }
   }, 180);
 %script
-  $('.game_info').popover({placement: 'bottom', html:true, trigger:'hover'});
+  $('.game_info, .error_auth').popover({html:true, trigger:'hover'});
 %script
   $(document).ready(function(){
   $('.bxslider').bxSlider();

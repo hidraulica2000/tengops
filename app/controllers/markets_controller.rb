@@ -3,12 +3,17 @@ class MarketsController < ApplicationController
   def index
     @user = current_user
     @fb_authentication = Authentication.find_by_provider_and_user_id('facebook', @user.id.to_s)
+    @twitter_authentication = Authentication.find_by_provider_and_user_id('twitter', @user.id.to_s)
+    @google_authentication = Authentication.find_by_provider_and_user_id('google_oauth2', @user.id.to_s)
+    if @twitter_authentication
+      @screen_name = @user.twitter_screen_name
+    end
     if @fb_authentication
       @fb_picture = @user.fb_profile_picture
     end
     if @user.market.present?
       @market = @user.market
-      @products = current_user.market.products
+      @products = @user.market.products
     else
       redirect_to new_market_path
     end

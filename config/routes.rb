@@ -10,6 +10,8 @@ Tengops::Application.routes.draw do
   put 'covers/:id/cover_selected' => 'welcome#cover_selected', :as => :select_cover
   get 'friends' => "news#friends", :as => :friends
   match '/auth/:provider/callback' => 'authentications#create'
+  match '/authentications/:id' => 'authentications#recreate', :as => :reauthenticate
+  get 'fb_albums' => 'product_pictures#index'
   root :to => "welcome#index"
   resources :news, :only => [:index, :show] do
     resources :commentts do

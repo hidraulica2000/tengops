@@ -22,7 +22,11 @@ gem 'gamesdb', '1.0.4'
 gem 'settingslogic', '2.0.9'
 gem 'rest-client' , '1.6.7'
 gem 'delayed_job_active_record', '0.4.3'
-gem 'oauth2'
+gem 'oauth2', '0.8.1'
+gem 'omniauth-twitter', '0.0.15'
+gem 'omniauth-google-oauth2', '0.1.13'
+gem 'google_plus', '0.2.2'
+gem 'omniauth-google-apps', '0.0.2'
 gem 'pry', :group => :development
 # Gems used only for assets and not required
 # in production environments by default.

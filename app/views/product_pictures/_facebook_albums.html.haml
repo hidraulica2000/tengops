@@ -1,0 +1,2 @@
+- current_user.fb_albums['data'].each do |album|
+  = image_tag(current_user.fb_album_cover(album['cover_photo']), :class => "img-polaroid", :style => "width: 110px")

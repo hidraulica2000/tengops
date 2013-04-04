@@ -31,7 +31,7 @@
             %a.roll-link.roll-red.scroll{:href => "#form-add-comment"}
               %span{"data-title" => "Agrega un comentario"} Agrega un comentario
           %ul.post-comments-list#comment-list
-            = image_tag(get_link("e622ns92i7ljegx"), "text-align" => "center")
+            = image_tag(get_link("e622ns92i7ljegx"))
           .white-card.extra-padding#form-add-comment
             = form_for([@new, @new.commentts.build], :id => "form-add-comment form-transparent", :remote => true) do |f|
               %fieldset

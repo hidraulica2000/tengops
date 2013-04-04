@@ -1,0 +1,30 @@
+%section.section-wrapper.create-account-page-w
+  .container
+    = form_for([@market, @payment_info], :html => {:class => "form-horizontal pull-left"}, :id => 'new_product') do |f|
+      .single-post-w
+        .fieldset
+          - if @payment_info.errors.any?
+            %div.alert.alert-error
+              %h3 Oops!
+              %ul
+                - @payment_info.errors.each do |attr|
+                  - @payment_info.errors[attr].each do |msg|
+                    %li
+                      = attr
+                      - next if msg.nil?
+                      = msg
+          %legend
+            %i.icon-money
+            = @market.title
+            \-
+            Información de Pago
+          .control-group
+            %label.control-label Nombre
+            .controls
+              = f.text_field :title, :style => "width: 300px;", :class => "span2", :type => "text", :required => true, :placeholder => "Banco, Efecty, Baloto, etc.."
+          .control-group
+            %label.control-label Información
+            .controls
+              = f.text_area :info, :style => "width: 300px;", :type => "text", :cols => "40", :rows => "6", :placeholder => "Numero de cuenta, condiciones, costo transacción, etc..."
+          .form-actions.no-margin-bottom
+            = f.submit "Agregar", :class => "btn btn-primary btn-block"

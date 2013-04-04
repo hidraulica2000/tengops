@@ -1,0 +1,83 @@
+%section.section-wrapper.create-account-page-w
+  .container
+    .row
+      .span6
+        = form_for([@market, @contact_info], :html => {:class => "form-horizontal pull-left"}, :id => 'new_product') do |f|
+          .single-post-w
+            .fieldset
+              - if @contact_info.errors.any?
+                %div.alert.alert-error
+                  %h3 Oops!
+                  %ul
+                    - @contact_info.errors.each do |attr|
+                      - @contact_info.errors[attr].each do |msg|
+                        %li
+                          = attr
+                          - next if msg.nil?
+                          = msg
+              %legend
+                %i.icon-book
+                = @market.title
+                \-
+                Información de Contacto
+              .control-group
+                %label.control-label Twitter
+                .controls
+                  - if @twitter_authentication
+                    .input-prepend
+                      %span.add-on @
+                      = f.text_field :twitter, :style => "width: 270px;", :class => "span2", :type => "text", :value => @screen_name
+                  - else
+                    = link_to '/auth/twitter?use_authorize=true', :class => "btn btn-primary btn-block" do
+                      %i.icon-twitter
+                      = "Conectar con Twitter"
+              .control-group
+                %label.control-label Facebook
+                .controls
+                  - if @fb_authentication
+                    .input-prepend
+                      %span.add-on
+                        %i.icon-facebook
+                      = f.select(:facebook, @fb_groups.map{|group| [group["name"], group["id"]]}, {}, :style => "width: 280px")
+                  - else
+                    = link_to '/auth/facebook/', :class => "btn btn-inverse btn-block" do
+                      %i.icon-facebook
+                      = "Conectar con Facebook"
+              .control-group
+                %label.control-label Google Plus
+                .controls
+                  - if @google_authentication
+                    .input-prepend
+                      %span.add-on
+                        %i.icon-google-plus
+                      = f.text_field :google_plus, :style => "width: 270px;", :type => "text", :value => current_user.google_info['url'], :disabled => true
+                  - else
+                    = link_to '/auth/google_oauth2?approval_prompt=force', :class => "btn btn-danger btn-block" do
+                      %i.icon-google-plus
+                      = "Conectar con Google Plus"
+              .control-group
+                %label.control-label Whatsapp
+                .controls
+                  .input-prepend
+                    %span.add-on
+                      = image_tag "whatsapp.svg", :style => "width: 16px; height: 18px"
+                    = f.text_field :whatsapp, :style => "width: 270px;", :type => "text"
+              .control-group
+                %label.control-label Teléfono
+                .controls
+                  .input-prepend
+                    %span.add-on
+                      %i.icon-phone
+                    = f.text_field :phone, :style => "width: 270px;", :class => "span2", :type => "text"
+              .control-group
+                %label.control-label Celular
+                .controls
+                  .input-prepend
+                    %span.add-on
+                      %i.icon-rss
+                    = f.text_field :cellphone, :style => "width: 270px;", :class => "span2", :type => "text"
+              .form-actions.no-margin-bottom
+                = f.submit "Guardar", :class => "btn btn-primary btn-block"
+      .span6
+        = image_tag(get_link('xe98girbr05jddj'))
+
