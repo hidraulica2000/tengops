@@ -1,6 +1,7 @@
 Tengops::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
-
+  ENV['FACEBOOK_APP_ID'] = "444805678935627";
+  ENV['FACEBOOK_SECRET'] = "03c6bd306599fda9a16608d5eb8e58ac";
   # Code is not reloaded between requests
   config.cache_classes = true
 
