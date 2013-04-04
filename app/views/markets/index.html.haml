@@ -24,7 +24,7 @@
                   %li
                     %i.icon-twitter-sign
                     = link_to @screen_name, 'https://www.twitter.com/' + @screen_name, :target => "blank"
-                - if @google_authentication
+                - unless @google_authentication.nil?
                   %li
                     - begin
                       %i.icon-google-plus-sign
@@ -75,21 +75,22 @@
     .modal-footer
       = link_to "No encontraste lo que buscas?", root_path, :class => "pull-left", :style => "text-decoration: none;"
       %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Cancelar
-  #error.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
-    .modal-header
-      %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
-      %h3#myModalLabel Oops!
-    .modal-body{:style => "padding-bottom: 5px"}
-      %p Ha ocurrido un error al autenticar tu cuenta de Google Plus. Esto puede deberse a varios motivos:
-      %ul
-        %li Has revocado el acceso a Tengo Playstation en las configuraciones de tu cuenta Google +.
-        %li Los servidores de Google se encuentran inhabilitados temporalmente.
-        %li Ha habido una excepción desconocida.
-      %p Puedes intentar reautenticar tu cuenta nuevamente, si no funciona intenta más tarde.
-      = link_to 'Reautenticar', reauthenticate_path(@google_authentication), :class => "btn btn-danger btn-block"
-    .modal-footer
-      = link_to "No encontraste lo que buscas?", root_path, :class => "pull-left", :style => "text-decoration: none;"
-      %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Cancelar
+  - unless @google_authentication.nil?
+    #error.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+        %h3#myModalLabel Oops!
+      .modal-body{:style => "padding-bottom: 5px"}
+        %p Ha ocurrido un error al autenticar tu cuenta de Google Plus. Esto puede deberse a varios motivos:
+        %ul
+          %li Has revocado el acceso a Tengo Playstation en las configuraciones de tu cuenta Google +.
+          %li Los servidores de Google se encuentran inhabilitados temporalmente.
+          %li Ha habido una excepción desconocida.
+        %p Puedes intentar reautenticar tu cuenta nuevamente, si no funciona intenta más tarde.
+        = link_to 'Reautenticar', reauthenticate_path(@google_authentication), :class => "btn btn-danger btn-block"
+      .modal-footer
+        = link_to "No encontraste lo que buscas?", root_path, :class => "pull-left", :style => "text-decoration: none;"
+        %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Cancelar
 %script
   $('#search').bindWithDelay("keyup", function(){
   if ($(this).val().length >= 3){
